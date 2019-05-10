@@ -1,0 +1,86 @@
+@import "./_variables.scss";
+
+.highlight{
+    min-height: 500px;
+}
+.con-b{
+    top: 450px;
+    background-color: white;
+    /* position: relative; */
+}
+
+.box-swap{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    max-width: 750px;
+    .line{
+        border: 1px solid $color;
+        height: 70px;
+        @media (max-width: 767.98px) { 
+            display: none;
+        }
+    }
+    
+    &:nth-child(odd){
+        .line{
+            margin-left: 10px;
+        }
+        .box-text{
+            text-align: right;
+            @media (max-width: 767.98px) { 
+                text-align: center;
+            }
+        }
+        .box-img{
+            
+        }
+
+    }
+    
+    &:nth-child(even){
+        .line{
+            margin-right: 10px;
+        }
+        .box-text{
+            order: 2;
+        }
+        .box-img{
+            order: 1;
+        }
+    }
+    .box-text{
+        @media (max-width: 767.98px) { 
+            margin:15px 0px;
+            order: 2;
+            text-align: center;
+        }
+    }
+    .box-img{
+        display: flex;
+        align-items: flex-end;
+        @media (max-width: 767.98px) { 
+            order: 1;
+        }
+    }
+    
+}
+
+.pallex{
+    color: white;
+    min-height: 400px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.readme{
+    border-bottom: 1px solid #0A4B31;
+    display: block;
+    color: black;
+}

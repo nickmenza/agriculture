@@ -1,0 +1,158 @@
+@font-face {
+  font-family: "thaisans";
+  src: url("/fonts/Thaisans/thaisansneue-regular-webfont.eot");
+  src: url("/fonts/Thaisans/thaisansneue-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/Thaisans/thaisansneue-regular-webfont.woff2") format("woff2"), url("/fonts/Thaisans/thaisansneue-regular-webfont.woff") format("woff"), url("/fonts/Thaisans/thaisansneue-regular-webfont.ttf") format("truetype"), url("/fonts/Thaisans/thaisansneue-regular-webfont.svg#thaisans_neueregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "thaisans";
+  src: url("/fonts/Thaisans/thaisansneue-bold-webfont.eot");
+  src: url("/fonts/Thaisans/thaisansneue-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/Thaisans/thaisansneue-bold-webfont.woff2") format("woff2"), url("/fonts/Thaisans/thaisansneue-bold-webfont.woff") format("woff"), url("/fonts/Thaisans/thaisansneue-bold-webfont.ttf") format("truetype"), url("/fonts/Thaisans/thaisansneue-bold-webfont.svg#thaisans_neuebold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "thaisans_neuesemi_bold";
+  src: url("/fonts/Thaisans/thaisansneue-semibold-webfont.eot");
+  src: url("/fonts/Thaisans/thaisansneue-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/Thaisans/thaisansneue-semibold-webfont.woff2") format("woff2"), url("/fonts/Thaisans/thaisansneue-semibold-webfont.woff") format("woff"), url("/fonts/Thaisans/thaisansneue-semibold-webfont.ttf") format("truetype"), url("/fonts/Thaisans/thaisansneue-semibold-webfont.svg#thaisans_neuesemi_bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "thaisans_neuelight";
+  src: url("/fonts/Thaisans/thaisansneue-light-webfont.eot");
+  src: url("/fonts/Thaisans/thaisansneue-light-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/Thaisans/thaisansneue-light-webfont.woff2") format("woff2"), url("/fonts/Thaisans/thaisansneue-light-webfont.woff") format("woff"), url("/fonts/Thaisans/thaisansneue-light-webfont.ttf") format("truetype"), url("/fonts/Thaisans/thaisansneue-light-webfont.svg#thaisans_neuelight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  color: black;
+  font-family: Kanit;
+  font-weight: lighter;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.header .hh {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0px 20px;
+}
+
+.header .logo {
+  width: 70px;
+}
+
+.header i {
+  color: black;
+  font-size: 2rem;
+}
+
+.color-main {
+  color: #0A4B31;
+}
+
+.footer {
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #0A4B31;
+}
+
+.footer .line {
+  border-bottom: 1px solid white;
+}
+
+.footer a {
+  padding: 10px;
+  color: white;
+}
+
+.footer .logo {
+  width: 50px;
+}
+
+.highlight {
+  min-height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.highlight .ro {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  bottom: 55px;
+}
+
+.highlight .border-r {
+  border: 1px solid black;
+  width: 50%;
+  border-left-color: #fff;
+  border-left-width: 4000px;
+  /* Change this value to vary the angle */
+  border-top-width: 720px;
+}
+
+.triangle-fluid {
+  background: transparent url("http://placekitten.com/g/1200/500") center center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.triangle-container {
+  box-sizing: border-box;
+  padding: 5%;
+  position: relative;
+}
+
+.triangle {
+  background: none;
+  border: 0 solid transparent;
+  height: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.triangle-left {
+  border-left-color: #fff;
+  border-left-width: 4000px;
+  /* Change this value to vary the angle */
+  border-top-width: 720px;
+  /* Change this value to vary the angle */
+  left: 0;
+}
+
+.triangle-right {
+  border-right-color: #fff;
+  border-right-width: 4000px;
+  border-top-width: 720px;
+  right: 0;
+}
+
