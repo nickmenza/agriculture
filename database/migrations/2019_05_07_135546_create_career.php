@@ -15,10 +15,10 @@ class CreateCareer extends Migration
     {
         Schema::create('career', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('career_name');
-            $table->text('detail');
-            $table->text('location');
-            $table->text('property');
+            $table->string('career_name')->nullable();
+            $table->text('detail')->nullable();
+            $table->text('location')->nullable();
+            $table->text('property')->nullable();
             $table->timestamps();
         });
     }

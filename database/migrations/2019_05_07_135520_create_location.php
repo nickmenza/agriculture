@@ -15,12 +15,12 @@ class CreateLocation extends Migration
     {
         Schema::create('location', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
-            $table->string('location');
-            $table->string('phone');
-            $table->string('email');
-            $table->string('latitude');
-            $table->string('longitude');
+            $table->string('title')->nullable();
+            $table->string('location')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
             $table->timestamps();
         });
     }

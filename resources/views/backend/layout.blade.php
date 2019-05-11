@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- <link href="/js/fancybox/source/jquery.fancybox.css" rel="stylesheet" type="text/css"> --}}
     <!-- CSS Libraries -->
 
@@ -79,6 +80,13 @@
                 border-color: #17AF9F;
                 color: #fff;
             }
+            .table thead tr th{
+                text-align: center;
+            }
+
+            .pagination{
+                justify-content:center;
+            }
 
 
             /* #17AF9F */
@@ -133,6 +141,24 @@
         $(".summernote-simple").each(function () {
             CKEDITOR.replace( $(this).attr("name") );
         });
+        $('input[type="file"]').on("change", function(){ 
+            readURL(this)
+         });
+         function readURL(input) {
+            let show = $(input).data().show
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#'+show).attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+       
     </script>
     @yield('more-script')
 

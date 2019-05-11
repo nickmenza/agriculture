@@ -27,11 +27,19 @@ Route::get('/career', 'Frontend\CareerController@index');
 Route::prefix('_admin')->name('admin.')->group(function () {
     Route::get('login', 'Backend\AuthController@index')->name('login');
     Route::post('login', 'Backend\AuthController@post')->name('login');
+    Route::get('logout', 'Backend\AuthController@logout')->name('logout');
 
-    Route::resource('news', 'Backend\ArticalController');
+    Route::group(['middleware' => ['admin']], function() {
+        Route::resource('banner', 'Backend\BannerController');
+        Route::resource('article', 'Backend\ArticleController');
+        Route::resource('products', 'Backend\ProductController');
+        Route::resource('location', 'Backend\LocationController');
+        Route::resource('career', 'Backend\CareerController');
+        Route::resource('contact', 'Backend\ContactController');
 
-    Route::get('test', function () {
-            return view('backend.test');
+        Route::get('test', function () {
+                return view('backend.test');
+        });
     });
 });
 

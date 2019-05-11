@@ -15,9 +15,10 @@ class CreateArtical extends Migration
     {
         Schema::create('article', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('article_name');
-            $table->string('detail');
-            $table->date('date');
+            $table->string('article_name')->nullable();
+            $table->string('detail')->nullable();
+            $table->string('images')->nullable();
+            $table->date('date')->nullable();
             $table->tinyInteger('type')->comment('1=ข่าวใหม่,2=คู่มือ,3=เกษตร'); 
 
             $table->timestamps();
@@ -31,6 +32,6 @@ class CreateArtical extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artical');
+        Schema::dropIfExists('article');
     }
 }

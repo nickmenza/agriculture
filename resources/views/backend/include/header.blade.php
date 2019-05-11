@@ -10,15 +10,12 @@
         <li class="dropdown">
             <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                 <img alt="image" src="{{url('stisla-master/assets/img/avatar/avatar-1.png')}}" class="rounded-circle mr-1">
-                <div class="d-sm-none d-lg-inline-block">{{ session()->get('pt.name') }} ({{ session()->get('pt.branch_name') }})</div>
+                <div class="d-sm-none d-lg-inline-block">{{ session()->get('username') }}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <a href="{{ url('/center/change_password') }}" class="dropdown-item has-icon">
-                    <i class="fas fa-cog"></i> Change Password
-                </a>
-                <a href="{{ url('/pt/logout') }}" class="dropdown-item has-icon text-danger">
-                    <i class="fas fa-sign-out-alt"></i> Logout
-                </a>
+                    <a href="{{ route('admin.logout') }}" class="dropdown-item has-icon text-danger">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
             </div>
         </li>
     </ul>

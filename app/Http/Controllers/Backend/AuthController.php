@@ -14,7 +14,7 @@ class AuthController extends Controller
     public function __construct() {
         $this->path = 'backend.auth';
         $this->view_path = 'auth';
-
+        $this->route_name = 'admin';
     }
 
     public function index(){
@@ -31,14 +31,17 @@ class AuthController extends Controller
         $email = $request->email;
         $password = $request->password;
         
+        $collection = collect([
+            ['username' => 'admin', 'password' => 'demo'],
+        ]);
 
-        $users = User::select()
-        ->Where('email','=',$email)
-        ->Where('password','=',$password)->first();
-
-        if($users){
-            Session::put('users_id', $users->users_id);
-            return redirect('_admin/news');
+        $collection = $collection
+            ->Where('username',$email)
+            ->firstWhere('password',$password);
+        
+        if($collection){
+            Session::put('username', $collection['username']);
+            return redirect(route($this->route_name.'.banner.index'));
         }else{
             return redirect()->back();
         }
@@ -46,9 +49,8 @@ class AuthController extends Controller
 
     public function logout()
     {
-        Session::put($this->path.'.users_id', '');
-        Session::put($this->path.'.name', '');
-        return redirect()->to($this->path.'/login');
+        Session::forget('username');
+        return redirect(route($this->route_name.'.login'));
     }
 
     

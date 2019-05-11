@@ -15,6 +15,7 @@ class Banner extends Model
     public $fillable = [
         'banner_name',
         'banner_name_en',
-        'image',
+        'images',
+        'type'
     ];
 }
