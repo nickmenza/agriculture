@@ -27,15 +27,28 @@
 
 
 @section('body')
-@component('frontend.component.highlight',['text_th'=>'ข่าวสารและกจกรรม','text_en'=>'NEWS AND EVENT','type'=>3])
+@component('frontend.component.highlight',['text_th'=>'คู่มือการจัดการสวน','text_en'=>'GARDEN MANAGEMENT GUIDE','type'=>5])
     
 @endcomponent
 
 
 <div class="container pt-5 pb-5">
+    <h4 class="text-center color-main">
+        {{$data->article_name}}
+    </h4>
+    <div class="text-center" style="color: #929292">
+        {{$data->date}}
+    </div>
+    <div>
+        {!! $data->detail !!}
+    </div>
+</div>
+
+<div class="container pb-5">
     <div class="row">
-        @foreach ($news as $item)
-        <a href="{{url('news/'.$item->id.'/'.$item->article_name)}}" class="col-sm-6 col-md-4 mb-3">
+        @foreach ($garden as $item)
+            
+        <div class="col-sm-6 col-md-4 mb-3">
             @if(Storage::disk('uploads')->exists($item->images))
                 <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100">
             @else
@@ -50,29 +63,30 @@
             <label style="height: 55px;overflow: hidden;">
                 {!! $item->detail !!}
             </label>
-            <div class="readme text-right pb-1">
+            <a href="{{url('garden/'.$item->id.'/'.$item->article_name)}}" class="readme text-right pb-1">
                 อ่านต่อ
                 <i class="fas fa-chevron-right"></i>
-            </div>
-        </a>
+            </a>
+        </div>
         @endforeach
 
     </div>
 </div>
 
-<div class="pallex" style="background-image: url('/images/news-bottom.png');position: relative;">
+<div class="pallex" style="background-image: url('/images/product-bottom.png');position: relative;">
     <div class="w-100 h-100 d-flex justify-content-center align-items-center" style="position: absolute;background: rgba(0, 0, 0, 0.4);">
         <div class="container text-center">
             <h4>
-                คู่มือการจัดการสวน
+                ผลิตภัณฑ์ของเรา
             </h4>
             <div class="mb-3">
-                ฐานข้อมูลและคู่มือต่างๆเกี่ยวกับปาล์มน้ำมัน อยากรู้อะไรค้นหาเลย
+                คัดเลือกหาล์มน้ำมันหลายสายพันธุ์ดีที่สุดจาดทั่วโลกเพื่อเกษตรกรของเรา
             </div>
-            <a href="{{url('garden')}}" class="btn btn-dark">ดูรายละเอียด</a>
+            <a href="#" class="btn btn-dark">ดูรายละเอียด</a>
         </div>
     </div>
 </div>
+
 
 @endsection
 

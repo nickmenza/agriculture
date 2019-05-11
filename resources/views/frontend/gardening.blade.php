@@ -27,7 +27,7 @@
 
 
 @section('body')
-@component('frontend.component.highlight',['text_th'=>'คู่มือการจัดการสวน','text_en'=>'GARDEN MANAGEMENT GUIDE'])
+@component('frontend.component.highlight',['text_th'=>'คู่มือการจัดการสวน','text_en'=>'GARDEN MANAGEMENT GUIDE','type'=>5])
     
 @endcomponent
 

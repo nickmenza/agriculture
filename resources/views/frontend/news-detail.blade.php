@@ -27,34 +27,26 @@
 
 
 @section('body')
-@component('frontend.component.highlight',['text_th'=>'ข่าวสารและกจกรรม','text_en'=>'NEWS AND EVENT'])
+@component('frontend.component.highlight',['text_th'=>'ข่าวสารและกจกรรม','text_en'=>'NEWS AND EVENT','type'=>3])
     
 @endcomponent
 
 
 <div class="container pt-5 pb-5">
-    <div class="row">
-        @for ($i = 0; $i < 9; $i++)
-        <div class="col-sm-6 col-md-4 mb-3">
-            <img src="https://via.placeholder.com/300x300" class="mb-1">
-            <h5 class="color-main">
-                JULY 6, 2018
-            </h5>
-            <h5>
-                ประกาศหยุด
-            </h5>
-            <label>
-                ประกาศหยุด
-            </label>
-            <a href="#" class="readme text-right pb-1">
-                อ่านต่อ
-                <i class="fas fa-chevron-right"></i>
-            </a>
-        </div>
-        @endfor
-
+    <h4 class="">
+        {{$data->article_name}}
+    </h4>
+    <div class="mb-1" style="color: #929292">
+        {{Helper::DateFormatTh(Carbon\Carbon::parse($data->date)->format('d/m/Y'))}}
     </div>
-    <img src="/images/detail.png">
+    @if(Storage::disk('uploads')->exists($data->images))
+        <img src="{{Storage::disk('uploads')->url($data->images)}}" class="mb-2 w-100">
+    @else
+        {{-- <img src="https://via.placeholder.com/300x300" class="mb-1 w-100"> --}}
+    @endif
+    <div class="mt-2">
+        {!! $data->detail !!}
+    </div>
 </div>
 
 <div class="pallex" style="background-image: url('/images/news-bottom.png');position: relative;">
@@ -66,7 +58,7 @@
             <div class="mb-3">
                 ฐานข้อมูลและคู่มือต่างๆเกี่ยวกับปาล์มน้ำมัน อยากรู้อะไรค้นหาเลย
             </div>
-            <a href="#" class="btn btn-dark">ดูรายละเอียด</a>
+            <a href="{{url('garden')}}" class="btn btn-dark">ดูรายละเอียด</a>
         </div>
     </div>
 </div>

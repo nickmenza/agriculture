@@ -1,11 +1,21 @@
 
 <?php
+if(!isset($type)){
+$type = 1; 
+}
+$data = App\Models\Banner::select()->where('type',$type)->first();
 $path = 'https://via.placeholder.com/1000x500';
-if(isset($path_img)){
-    if(Storage::disk('images')->exists($path_img)){
-        $path = Storage::disk('images')->url($path_img);
+
+if($data){
+    if(Storage::disk('uploads')->exists($data->images)){
+        $path = Storage::disk('uploads')->url($data->images);
     }
 }
+// if(isset($path_img)){
+//     if(Storage::disk('images')->exists($path_img)){
+//         $path = Storage::disk('images')->url($path_img);
+//     }
+// }
 ?>
 <div class="highlight" style="background-image: url('{{$path}}');">
     <div class="color-main text-center">

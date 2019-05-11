@@ -226,7 +226,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Html' => Collective\Html\HtmlFacade::class,
-        'Input' => Illuminate\Support\Facades\Input::class
+        'Input' => Illuminate\Support\Facades\Input::class,
+        'Helper' => App\Helpers\Helper::class,
+
     ],
 
 ];

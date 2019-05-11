@@ -13,9 +13,17 @@
 
 Route::get('/', 'Frontend\HomeController@index');
 Route::get('/news', 'Frontend\NewController@index');
-Route::get('/news/detail', 'Frontend\NewController@detail');
+Route::get('/news/{id}/{name}', 'Frontend\NewController@detail');
 Route::get('/product', 'Frontend\ProductController@index');
+Route::get('/product/{id}/{name}', 'Frontend\ProductController@detail');
+
 Route::get('/garden', 'Frontend\GargenController@index');
+Route::get('/garden/{id}/{name}', 'Frontend\GargenController@detail');
+
+Route::get('/agriculturist', 'Frontend\AgController@index');
+
+Route::get('/location', 'Frontend\LocationController@index');
+
 Route::get('/about-us', 'Frontend\AboutusController@index');
 Route::get('/contact', 'Frontend\ContactController@index');
 Route::get('/career', 'Frontend\CareerController@index');
