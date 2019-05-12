@@ -15,7 +15,8 @@ class GargenController extends Controller
     }
 
     public function index(){
-        return view('frontend.gardening');
+        $garden = Article::select()->where('type',2)->orderBy('id','desc')->get();
+        return view('frontend.gardening',compact('garden'));
     }
 
     public function detail($id,$name){

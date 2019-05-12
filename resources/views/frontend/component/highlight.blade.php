@@ -10,6 +10,9 @@ if($data){
     if(Storage::disk('uploads')->exists($data->images)){
         $path = Storage::disk('uploads')->url($data->images);
     }
+    $text_th = $data->banner_name;
+    $text_en = $data->banner_name_en;
+
 }
 // if(isset($path_img)){
 //     if(Storage::disk('images')->exists($path_img)){
@@ -18,7 +21,7 @@ if($data){
 // }
 ?>
 <div class="highlight" style="background-image: url('{{$path}}');">
-    <div class="color-main text-center">
+    <div class="text-center" style="color:white">
         <h3 class="mb-1">
             @if(isset($text_th))
             {{$text_th}}

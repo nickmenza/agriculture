@@ -16,17 +16,17 @@ class ProductController extends Controller
     }
 
     public function index(){
-        $products = Product::select()->get();
+        $products = Product::select()->paginate(6);
         return view('frontend.product',compact('products'));
     }
 
     public function detail($id,$name){
-        $products = Product::select()->orderBy('id','desc')->get();
+        $products = Product::select()->orderBy('id','desc')->limit(4)->get();
         $data = Product::find($id);
         if(!$data){
             return redirect()->back();
         }
-        return view('frontend.product',compact('products','data'));
+        return view('frontend.product-detail',compact('products','data'));
     }
     
 }

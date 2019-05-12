@@ -25,7 +25,7 @@
                         <select class="custom-select" name="type">
                             <option value="">กรุณาเลือก</option>
                             @foreach ($list_type as $key => $item)
-                            <option value="{{$key}}" @if($data->type == $key)selected @endif>{{$item}}</option>
+                            <option value="{{$key}}" @if($data->type == $key)selected @endif>{{$item}}({{$key}})</option>
                             @endforeach
                         </select>
                 </div>

@@ -37,7 +37,7 @@
         {{$data->article_name}}
     </h4>
     <div class="text-center" style="color: #929292">
-        {{$data->date}}
+        {{Helper::DateFormatTh(Carbon\Carbon::parse($data->date)->format('d/m/Y'))}}
     </div>
     <div>
         {!! $data->detail !!}
@@ -45,6 +45,7 @@
 </div>
 
 <div class="container pb-5">
+    <h5 class="text-center color-main">บทความล่าสุด</h5>
     <div class="row">
         @foreach ($garden as $item)
             

@@ -38,7 +38,7 @@ body {
 
 p {
   margin: 0;
-  line-height: 20px;
+  line-height: unset;
 }
 
 .font-bold {
@@ -167,5 +167,31 @@ a:hover {
   border-right-width: 4000px;
   border-top-width: 720px;
   right: 0;
+}
+
+.shadow1 {
+  box-shadow: inset 0 0 1px #000000;
+}
+
+.ag {
+  position: relative;
+}
+
+.ag .detail {
+  padding: 5px 10px;
+  color: white;
+  width: 100%;
+  background-color: #0A4B31;
+  position: absolute;
+  bottom: 0;
+  display: none;
+}
+
+.ag:hover .detail {
+  display: block;
+}
+
+.ag:focus .detail {
+  display: block;
 }
 

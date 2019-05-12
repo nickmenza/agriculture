@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input;
+use App\Models\Career;
 
 class CareerController extends Controller
 {
@@ -14,7 +15,8 @@ class CareerController extends Controller
     }
 
     public function index(){
-        return view('frontend.career');
+        $data = Career::select()->get();
+        return view('frontend.career',compact('data'));
     }
     
 }

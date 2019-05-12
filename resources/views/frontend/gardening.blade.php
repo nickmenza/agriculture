@@ -34,29 +34,32 @@
 
 <div class="container pt-5 pb-5">
     <div class="row">
-        @for ($i = 0; $i < 9; $i++)
-        <div class="col-sm-6 col-md-4 mb-3 text-center">
-            <img src="https://via.placeholder.com/300x300" class="mb-1">
-            <h5 class="color-main">
-                JULY 6, 2018
-            </h5>
-            <h5>
-                ประกาศหยุด
-            </h5>
-            <label>
-                ประกาศหยุด
-            </label>
-            <a href="#" class="readme text-right pb-1">
-                อ่านต่อ
-                <i class="fas fa-chevron-right"></i>
+            @foreach ($garden as $item)
+            <a href="{{url('garden/'.$item->id.'/'.Str::slug($item->article_name, '-'))}}" class="col-sm-6 col-md-4 mb-3">
+                @if(Storage::disk('uploads')->exists($item->images))
+                    <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100">
+                @else
+                    <img src="https://via.placeholder.com/300x300" class="mb-1 w-100">
+                @endif
+                <h5 class="color-main">
+                    {{Carbon\Carbon::parse($item->date)->format('F d, Y')}}
+                </h5>
+                <h5>
+                    {{$item->article_name}}
+                </h5>
+                <label style="height: 55px;overflow: hidden;">
+                    {!! $item->detail !!}
+                </label>
+                <div class="readme text-right pb-1">
+                    อ่านต่อ
+                    <i class="fas fa-chevron-right"></i>
+                </div>
             </a>
-        </div>
-        @endfor
-
+            @endforeach
     </div>
 </div>
 
-<div class="pallex" style="background-image: url('/images/product-bottom.png');position: relative;">
+<div class="pallex" style="background-image: url('/images/b-garden.png');position: relative;">
     <div class="w-100 h-100 d-flex justify-content-center align-items-center" style="position: absolute;background: rgba(0, 0, 0, 0.4);">
         <div class="container text-center">
             <h4>
@@ -65,7 +68,7 @@
             <div class="mb-3">
                 คัดเลือกหาล์มน้ำมันหลายสายพันธุ์ดีที่สุดจาดทั่วโลกเพื่อเกษตรกรของเรา
             </div>
-            <a href="#" class="btn btn-dark">ดูรายละเอียด</a>
+            <a href="{{url('product')}}" class="btn btn-dark">ดูรายละเอียด</a>
         </div>
     </div>
 </div>

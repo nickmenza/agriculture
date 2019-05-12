@@ -35,25 +35,52 @@
     
 @endcomponent
 
-<div class="bg-img" style="background-image: url('/images/bg1.png')">
-<div class="container pt-5 pb-5">
+<div style="background-color: #F7F7F7;">
+<div class="container pt-5 pb-5" style="backgroud">
     <div class="row">
-        @for ($i = 0; $i < 6; $i++)
-        <a class="col-sm-6 col-md-4 mb-3 text-center" href="#">
-            <div style="background-color:white;color:black" class="p-2">
-                <img src="https://via.placeholder.com/300x300" class="mb-1">
+        <div class="col-md-4">
+            <div style="background-color:white;color:black" class="shadow1 p-2">
+                @if(Storage::disk('uploads')->exists($data->images))
+                <img src="{{Storage::disk('uploads')->url($data->images)}}" class="mb-1 w-100">
+                @else
+                    <img src="https://via.placeholder.com/300x300" class="mb-1 w-100">
+                @endif
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h5 class="color-main mt-2">{{$data->product_name}} ( {{$data->product_name_en}} )</h5>
+            <h5 class="">ชื่อเดิม ​: {{$data->product_name_old}}</h5>
+            <div class="form-group">
+            </div>
+            <div class="" style="line-height:2">
+                {!! $data->detail !!}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container pt-5 pb-5">
+    <h5 class="text-center color-main pb-3">ผลิตภัณฑ์แนะนำ</h5>
+    <div class="row">
+        @foreach ($products as $item)
+        <a class="col-sm-6 col-md-3 mb-3 text-center" href="#">
+            <div style="background-color:white;color:black" class="shadow1 p-2">
+                @if(Storage::disk('uploads')->exists($item->images))
+                    <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100">
+                @else
+                    <img src="https://via.placeholder.com/300x300" class="mb-1 w-100">
+                @endif
                 <div>
-                    ชาร์เลนเจอร์
+                    {{$item->product_name}}
                 </div>
                 <div class="color-main">
-                    CHALLENGER
+                    {{$item->product_name_en}}
                 </div>
             </div>
         </a>
-        @endfor
-
+        @endforeach
     </div>
-</div>
 </div>
 <div class="pallex" style="background-image: url('/images/product-bottom.png');position: relative;">
     <div class="w-100 h-100 d-flex justify-content-center align-items-center" style="position: absolute;background: rgba(0, 0, 0, 0.4);">
@@ -64,7 +91,7 @@
             <div class="mb-3">
                 เกษตรกรผู้สนใจสามารถสั่งซื้อและเยี่ยมชมกระบวนการเพาะกล้าปาล์มน้ำมันได้แล้ววันนี้..ทุกสาขาทั่วไทย
             </div>
-            <a href="#" class="btn btn-dark">ดูรายละเอียด</a>
+            <a href="{{url('location')}}" class="btn btn-dark">ดูรายละเอียด</a>
         </div>
     </div>
 </div>

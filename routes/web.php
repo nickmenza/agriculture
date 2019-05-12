@@ -33,6 +33,9 @@ Route::get('/career', 'Frontend\CareerController@index');
 // admin
 
 Route::prefix('_admin')->name('admin.')->group(function () {
+    Route::get('', function(){
+        return redirect('_admin/login');
+    });
     Route::get('login', 'Backend\AuthController@index')->name('login');
     Route::post('login', 'Backend\AuthController@post')->name('login');
     Route::get('logout', 'Backend\AuthController@logout')->name('logout');
