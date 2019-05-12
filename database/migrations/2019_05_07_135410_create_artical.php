@@ -16,7 +16,7 @@ class CreateArtical extends Migration
         Schema::create('article', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('article_name')->nullable();
-            $table->string('detail')->nullable();
+            $table->text('detail')->nullable();
             $table->string('images')->nullable();
             $table->date('date')->nullable();
             $table->tinyInteger('type')->comment('1=ข่าวใหม่,2=คู่มือ,3=เกษตร'); 

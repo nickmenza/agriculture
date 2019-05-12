@@ -2,31 +2,31 @@
     $footer = [
         [
             'text' => 'หน้าหลัก',
-            'link' => '#',
+            'link' => url('/'),
         ],
         [
             'text' => 'เกี่ยวกับเรา',
-            'link' => '#',
+            'link' => url('/about-us'),
         ],
         [
             'text' => 'เกษตรกรตัวอย่าง',
-            'link' => '#',
+            'link' => url('/agriculturist'),
         ],
         [
             'text' => 'ศูนย์กลางปาล์มน้ำมัน',
-            'link' => '#',
+            'link' => url('/location'),
         ],
         [
             'text' => 'ผลิตภัณฑ์',
-            'link' => '#',
+            'link' => url('/product'),
         ],
         [
             'text' => 'ข่าวสารและกิจกรรม',
-            'link' => '#',
+            'link' => url('/news'),
         ],
         [
             'text' => 'ติดต่อเรา',
-            'link' => '#',
+            'link' => url('/contact'),
         ],
     ];
 ?>
