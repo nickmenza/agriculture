@@ -167,3 +167,15 @@ a{
         }
      }
  }
+
+ .btn.btn-m, .btn-m.disabled {
+    box-shadow: 0 2px 6px $color;
+    background-color: $color;
+    border-color: $color;
+    color: #fff;
+    &:hover{
+        box-shadow: 0 2px 6px $color;
+        background-color: $color !important;
+        border-color: $color;
+    }
+}

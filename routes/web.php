@@ -26,6 +26,8 @@ Route::get('/location', 'Frontend\LocationController@index');
 
 Route::get('/about-us', 'Frontend\AboutusController@index');
 Route::get('/contact', 'Frontend\ContactController@index');
+Route::post('/contact', 'Frontend\ContactController@post');
+
 Route::get('/career', 'Frontend\CareerController@index');
 
 

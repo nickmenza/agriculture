@@ -195,3 +195,18 @@ a:hover {
   display: block;
 }
 
+.btn.btn-m,
+.btn-m.disabled {
+  box-shadow: 0 2px 6px #0A4B31;
+  background-color: #0A4B31;
+  border-color: #0A4B31;
+  color: #fff;
+}
+
+.btn.btn-m:hover,
+.btn-m.disabled:hover {
+  box-shadow: 0 2px 6px #0A4B31;
+  background-color: #0A4B31 !important;
+  border-color: #0A4B31;
+}
+
