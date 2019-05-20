@@ -19,8 +19,8 @@ class CreateLocation extends Migration
             $table->string('location')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
-            $table->string('latitude')->nullable();
-            $table->string('longitude')->nullable();
+            $table->text('link')->nullable();
+            $table->text('iframe')->nullable();
             $table->timestamps();
         });
     }

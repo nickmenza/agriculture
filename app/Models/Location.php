@@ -17,7 +17,7 @@ class Location extends Model
         'location',
         'phone',
         'email',
-        'latitude',
-        'longitude',
+        'link',
+        'iframe',
     ];
 }

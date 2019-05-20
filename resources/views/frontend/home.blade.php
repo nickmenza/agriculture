@@ -18,25 +18,77 @@
     {{-- <div style="margin-top: -70px;"></div> --}}
     <div class="row con-b p-2" style="margin-top: -70px;" style="background-color:white">
         <div class="col-sm-6 col-md-3 mb-3 text-center">
-            <img class="w-100 h-100" src="/images/h-about.png">
+            <div class="background-h w-100" style="background-image: url('/images/h-about.png')">
+                <div class="h5 mb-1">
+                    เกี่ยวกับเรา
+                </div>
+                <div class="text-uppercase">
+                    about us
+                </div>
+            </div>
         </div>
-        <div class="col-sm-6 col-md-6 mb-3 text-center">
-            <img class="w-100" src="/images/h-product.png">
+        <div class="col-sm-6 col-md-6 mb-3 text-right">
+            <div class="background-h w-100" style="background-image: url('/images/h-product.png')">
+                <div class="text-uppercase">
+                    OUR PRODUCTs
+                </div>
+                <div class="h5 mb-1">
+                    ผลิตภัณฑ์ของเรา
+                </div>
+                <a class="btn btn-m h6" style="width:120px">
+                    ดูรายละเอียด
+                </a>
+            </div>
         </div>
         <div class="col-sm-6 col-md-3 mb-3 text-center">
-            <img class="w-100 h-100" src="/images/h-location.png">
+            <div class="background-h w-100" style="background-image: url('/images/h-location.png')">
+                <div class="h5 mb-1">
+                    ศูนย์กล้าปาล์มน้ำมัน
+                </div>
+                <div class="text-uppercase">
+                    old palm plantation center
+                </div>
+            </div>
         </div>
         <div class="col-sm-6 col-md-3 mb-3 text-center">
-            <img class="w-100 h-100" src="/images/h-garden.png">
+            <div class="background-h w-100" style="background-image: url('/images/h-garden.png')">
+                <div class="h5 mb-1">
+                    คู่มือการจัดการสวน
+                </div>
+                <div class="text-uppercase">
+                    garden management
+                </div>
+            </div>
         </div>
         <div class="col-sm-6 col-md-3 mb-3 text-center">
-            <img class="w-100 h-100" src="/images/h-ag.png">
+            <div class="background-h w-100 " style="background-image: url('/images/h-ag.png')">
+                <div class="h5 mb-1">
+                    เกษตรตัวอย่าง
+                </div>
+                <div class="text-uppercase">
+                    OUR AGRiculturust
+                </div>
+            </div>
         </div>
         <div class="col-sm-6 col-md-3 mb-3 text-center">
-            <img class="w-100 h-100" src="/images/h-new.png">
+            <div class="background-h w-100 h-100" style="background-image: url('/images/h-new.png')">
+                <div class="h5">
+                    ข่าวสารและกิจกรรม
+                </div>
+                <div class="text-uppercase">
+                    news and event
+                </div>
+            </div>
         </div>
         <div class="col-sm-6 col-md-3 mb-3 text-center">
-            <img class="w-100 h-100" src="/images/h-career.png">
+            <div class="background-h w-100 h-100" style="background-image: url('/images/h-career.png')">
+                <div class="h5">
+                    ร่วมงานกับเรา
+                </div>
+                <div class="text-uppercase">
+                    career
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -204,9 +204,20 @@ a:hover {
 }
 
 .btn.btn-m:hover,
-.btn-m.disabled:hover {
+.btn.btn-m:focus,
+.btn-m.disabled:hover,
+.btn-m.disabled:focus {
   box-shadow: 0 2px 6px #0A4B31;
   background-color: #0A4B31 !important;
   border-color: #0A4B31;
+}
+
+.b-hover {
+  cursor: pointer;
+}
+
+.b-hover:hover {
+  background-color: #0A4B31;
+  color: white;
 }
 

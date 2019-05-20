@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Input;
+use App\Models\Location;
 
 class LocationController extends Controller
 {
@@ -14,7 +14,8 @@ class LocationController extends Controller
     }
 
     public function index(){
-        return view('frontend.location');
+        $data = Location::select()->get();
+        return view('frontend.location',compact('data'));
     }
     
 }
