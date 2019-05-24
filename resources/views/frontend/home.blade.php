@@ -5,7 +5,7 @@
 @endsection
 
 @section('body')
-
+<div class="" style="z-index:-2;position:relative">
 @component('frontend.component.highlight',
     [
         'text_th'=>'บริษัท อาร์ดี เกษตรพัฒนา จำกัด',
@@ -14,85 +14,113 @@
         'type' => 1
     ])
 @endcomponent
+</div>
 <div class="container">
     {{-- <div style="margin-top: -70px;"></div> --}}
-    <div class="row con-b p-2" style="margin-top: -70px;" style="background-color:white">
-        <div class="col-sm-6 col-md-3 mb-3 text-center">
-            <div class="background-h w-100" style="background-image: url('/images/h-about.png')">
-                <div class="h5 mb-1">
-                    เกี่ยวกับเรา
-                </div>
-                <div class="text-uppercase">
-                    about us
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-6 mb-3 text-right">
-            <div class="background-h w-100" style="background-image: url('/images/h-product.png')">
-                <div class="text-uppercase">
-                    OUR PRODUCTs
-                </div>
-                <div class="h5 mb-1">
-                    ผลิตภัณฑ์ของเรา
-                </div>
-                <a class="btn btn-m h6" style="width:120px">
-                    ดูรายละเอียด
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3 mb-3 text-center">
-            <div class="background-h w-100" style="background-image: url('/images/h-location.png')">
-                <div class="h5 mb-1">
-                    ศูนย์กล้าปาล์มน้ำมัน
-                </div>
-                <div class="text-uppercase">
-                    old palm plantation center
+    <div class="row con-b p-2" style="margin-top: -70px;z-index:-1" style="background-color:white">
+        <div class="col-3 mb-3 text-center">
+            <div class="background-new">
+                <img class="w-100 h-100" src="{{url('/images/h-about.png')}}">
+                <div class="b-detail">
+                    <div class="box justify-content-end">
+                        <div class="h5 mb-1">
+                            เกี่ยวกับเรา
+                        </div>
+                        <div class="text-uppercase">
+                            about us
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 col-md-3 mb-3 text-center">
-            <div class="background-h w-100" style="background-image: url('/images/h-garden.png')">
-                <div class="h5 mb-1">
-                    คู่มือการจัดการสวน
-                </div>
-                <div class="text-uppercase">
-                    garden management
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3 mb-3 text-center">
-            <div class="background-h w-100 " style="background-image: url('/images/h-ag.png')">
-                <div class="h5 mb-1">
-                    เกษตรตัวอย่าง
-                </div>
-                <div class="text-uppercase">
-                    OUR AGRiculturust
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3 mb-3 text-center">
-            <div class="background-h w-100 h-100" style="background-image: url('/images/h-new.png')">
-                <div class="h5">
-                    ข่าวสารและกิจกรรม
-                </div>
-                <div class="text-uppercase">
-                    news and event
+
+        <div class="col-6 mb-3 text-right">
+            <div class="background-new">
+                <img class="w-100 h-100" src="{{url('/images/h-product.png')}}">
+                <div class="b-detail">
+                    <div class="box justify-content-center align-items-end">
+                        <div class="h5 mb-1">
+                            ผลิตภัณฑ์ของเรา
+                        </div>
+                        <div class="text-uppercase">
+                            OUR PRODUCTs
+                        </div>
+                        <a href="{{url('/product')}}" class="btn btn-m h6" style="width:120px">
+                            ดูรายละเอียด
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 col-md-3 mb-3 text-center">
-            <div class="background-h w-100 h-100" style="background-image: url('/images/h-career.png')">
-                <div class="h5">
-                    ร่วมงานกับเรา
-                </div>
-                <div class="text-uppercase">
-                    career
+        
+        <div class="col-3 mb-3 text-center">
+            <div class="background-new">
+                <img class="w-100 h-100" src="{{url('/images/h-location.png')}}">
+                <div class="b-detail">
+                    <div class="box">
+                        <div class="h5 mb-1">
+                            ศูนย์กล้าปาล์มน้ำมัน
+                        </div>
+                        <div class="text-uppercase">
+                            old palm plantation center
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        <?php
+        $list_a = [
+            [
+                'text' => 'คู่มือการจัดการสวน',
+                'text_en' => 'garden management',
+                'img' => url('/images/h-garden.png'),
+                'cls' => ''
+
+            ],
+            [
+                'text' => 'เกษตรตัวอย่าง',
+                'text_en' => 'OUR AGRiculturust',
+                'img' => url('/images/h-ag.png'),
+                'cls' => ''
+
+            ],
+            [
+                'text' => 'ข่าวสารและกิจกรรม',
+                'text_en' => 'news and event',
+                'img' => url('/images/h-new.png'),
+                'cls' => 'justify-content-end'
+
+            ],
+            [
+                'text' => 'ร่วมงานกับเรา',
+                'text_en' => 'career',
+                'img' => url('/images/h-career.png'),
+                'cls' => 'justify-content-end'
+            ],
+        ]
+        ?>
+        @foreach ($list_a as $item)
+            
+        <div class="col-6 col-md-3 mb-3 text-center">
+            <div class="background-new">
+                <img class="w-100 h-100" src="{{$item['img']}}">
+                <div class="b-detail">
+                    <div class="box {{$item['cls']}}">
+                        <div class="h5 mb-1">
+                            {{$item['text']}}
+                        </div>
+                        <div class="text-uppercase">
+                            {{$item['text_en']}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
     </div>
 </div>
-<div style="background-image: url('/images/h-back.png');margin-top:-150px;padding-top: 180px;padding-bottom:30px">
+<div style="background-image: url('/images/h-back.png');margin-top:-150px;padding-top: 180px;padding-bottom:30px;z-index: -1;position: relative;">
     <div class="container"> 
         <?php
             $list = [

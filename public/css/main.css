@@ -48,25 +48,56 @@ p {
 .header {
   position: fixed;
   width: 100%;
-  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
-.header .hh {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1100px;
-  margin: auto;
-  padding: 0px 20px;
+.header .navbar {
+  left: 0;
+  right: 0;
+  background-color: #0A4B31;
+  height: 60px;
 }
 
 .header .logo {
-  width: 70px;
+  max-width: 100%;
+  width: 75px;
 }
 
-.header i {
-  color: black;
+.header .navbar-toggler {
+  margin-bottom: 30px;
+}
+
+.header .navbar-toggler i {
+  color: white;
   font-size: 2rem;
+}
+
+.header .h-contact {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 12px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  border: 1px solid black;
+}
+
+.header .h-contact:hover {
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.header .header-link {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.header .header-link a {
+  color: white;
+  padding: 10px;
 }
 
 .color-main {
