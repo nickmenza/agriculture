@@ -9,6 +9,14 @@
             'link' => url('/about-us'),
         ],
         [
+            'text' => 'ข่าวสารและกิจกรรม',
+            'link' => url('/news'),
+        ],
+        [
+            'text' => 'คู่มือการจัดการสวน',
+            'link' => url('/garden'),
+        ],
+        [
             'text' => 'เกษตรกรตัวอย่าง',
             'link' => url('/agriculturist'),
         ],
@@ -20,10 +28,7 @@
             'text' => 'ผลิตภัณฑ์',
             'link' => url('/product'),
         ],
-        [
-            'text' => 'ข่าวสารและกิจกรรม',
-            'link' => url('/news'),
-        ],
+        
         [
             'text' => 'ติดต่อเรา',
             'link' => url('/contact'),
