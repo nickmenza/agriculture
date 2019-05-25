@@ -28,7 +28,10 @@
             'text' => 'ผลิตภัณฑ์',
             'link' => url('/product'),
         ],
-        
+        [
+            'text' => 'ร่วมงานกับเรา',
+            'link' => url('/career'),
+        ],
         [
             'text' => 'ติดต่อเรา',
             'link' => url('/contact'),
