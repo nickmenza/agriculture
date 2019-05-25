@@ -119,3 +119,23 @@
   border-style: solid;
 }
 
+.owl-carousel {
+  max-width: 750px;
+  margin: auto;
+}
+
+.owl-carousel .owl-item .item {
+  color: white;
+}
+
+.owl-carousel .owl-item img {
+  width: 150px !important;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.owl-carousel .owl-item.center img {
+  width: 250px !important;
+  margin-top: 0px;
+}
+

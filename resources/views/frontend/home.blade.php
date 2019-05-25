@@ -1,6 +1,7 @@
 @extends('frontend.layout')
 
 @section('more-style')
+    {{ Html::style('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css') }}
     {{ Html::style('css/home.css') }}
 @endsection
 
@@ -15,9 +16,9 @@
     ])
 @endcomponent
 </div>
-<div class="container">
+<div class="container pt-5 pb-5">
     {{-- <div style="margin-top: -70px;"></div> --}}
-    <div class="row con-b p-2" style="margin-top: -70px;z-index:-1" style="background-color:white">
+    <div class="row con-b p-2" style="margin-top: -70px;z-index:0" style="background-color:white">
         <div class="col-3 mb-3 text-center">
             <div class="background-new">
                 <img class="w-100 h-100" src="{{url('/images/h-about.png')}}">
@@ -120,7 +121,7 @@
         @endforeach
     </div>
 </div>
-<div style="background-image: url('/images/h-back.png');margin-top:-150px;padding-top: 180px;padding-bottom:30px;z-index: -1;position: relative;">
+<div style="background-image: url('/images/h-back.png');margin-top:-150px;padding-top: 180px;padding-bottom:30px;z-index: -2;position: relative;">
     <div class="container"> 
         <?php
             $list = [
@@ -167,8 +168,29 @@
     </div>
 </div>
 
-<img class="w-100 h-100" src="/images/h-backag.png">
-
+{{-- <img class="w-100 h-100" src="/images/h-backag.png"> --}}
+<div class="highlight" style="background-image: url('/images/bg-loop.png');z-index: -2;">
+    <div class="container">
+        <div class="owl-carousel owl-theme" id="owl-images">
+            @foreach ($list_home as $i => $item)
+                <div class="item"  data-position="{{$i}}">
+                    @if(Storage::disk('uploads')->exists($item->images))
+                        <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100">
+                    @else
+                        <img src="https://via.placeholder.com/300x300" class="mb-1 w-100">
+                    @endif
+                </div>
+            @endforeach
+        </div>
+        <div class="owl-carousel owl-theme" id="owl-text">
+            @foreach ($list_home as $i => $item)
+                <div class="item text-center" id="text{{$i}}" data-position1="{{$i}}">
+                    {!! $item->detail !!}
+                </div>
+            @endforeach
+        </div>
+    </div>
+</div>
 <div class="container pt-5 pb-5">
     <div class="row">
         @foreach ($garden as $item)
@@ -200,4 +222,39 @@
 @endsection
 
 @section('more-script')
+{{ Html::script('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js') }}
+<script>
+    $(function() {
+        
+        $('#owl-images').owlCarousel({
+            center: true,
+            items:2,
+            loop:true,
+            margin:10,
+            responsive:{
+                600:{
+                    items:3
+                }
+            }
+        });
+        $('#owl-text').owlCarousel({
+            center: true,
+            items:2,
+            loop:true,
+            margin:10,
+            responsive:{
+                600:{
+                    items:1
+                }
+            }
+        });
+        $(document).on('click', '.owl-item>div', function() {
+           console.log( $(this).data())
+            $('.owl-carousel').trigger('to.owl.carousel', $(this).data( 'position' ) );
+            $('#owl-text').trigger('to.owl.carousel', $(this).data( 'position1' ) );
+
+        });
+        
+    });
+</script>
 @endsection

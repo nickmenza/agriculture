@@ -118,3 +118,24 @@
     }
     
 }
+
+.owl-carousel{
+    max-width: 750px;
+    margin: auto;
+    .owl-item{
+        .item{
+            color: white;
+        }
+        img{
+            width: 150px !important;
+            margin: auto;
+            margin-top: 70px;
+        }
+        &.center{
+            img{
+                width: 250px !important;
+                margin-top: 0px;
+            }
+        }
+    }
+}

@@ -49,6 +49,7 @@ Route::prefix('_admin')->name('admin.')->group(function () {
         Route::resource('location', 'Backend\LocationController');
         Route::resource('career', 'Backend\CareerController');
         Route::resource('contact', 'Backend\ContactController');
+        Route::resource('seo', 'Backend\SeoController');
 
         Route::get('test', function () {
                 return view('backend.test');

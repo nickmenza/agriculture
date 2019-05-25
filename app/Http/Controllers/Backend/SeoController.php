@@ -5,34 +5,37 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Storage;
-class ArticleController extends Controller
+class SeoController extends Controller
 {
     public function __construct() {
-        $this->path = 'backend.article';
+        $this->path = 'backend.seo';
         $this->view_path = 'auth';
-        $this->title = 'ข่าวสารและกิจกรรม';
-        $this->route_name = 'admin.article';
-        $this->model = 'App\Models\Article';
-        $this->search_fields = ['article_name','date'];
+        $this->title = 'SEO';
+        $this->route_name = 'admin.seo';
+        $this->model = 'App\Models\Seo';
+        $this->search_fields = ['title','keyword','description'];
+        $this->list_type = [
+            1 => 'home',
+            2 => 'about',
+            3 => 'news',
+            4 => 'product',
+            5 => 'garden',
+            6 => 'agriculturist',
+            7 => 'location',
+            8 => 'career',
+            9 => 'contact',
+        ];
+            
+
     }
     
     public function index(Request $request){
-        // check type
-        if($request->has('article_type')){
-            session()->put('article_type',$request->article_type);
-        }
+        $list_type = $this->list_type;
         $path = $this->path;
         $view_path = $this->view_path;
-        $title = $this->title();
+        $title = $this->title;
         $route_name = $this->route_name;
         $model = new $this->model;
-        if($request->has('article_type')){
-            session()->put('article_type',$request->article_type);
-        }
-        if(session()->has('article_type')){
-            $model = $model->where('type',session()->get('article_type'));
-        }
-
         if($request->has('search')){
             $model = $model->where(function($query) use($request){
                 foreach ($this->search_fields as $key => $value) {
@@ -46,16 +49,18 @@ class ArticleController extends Controller
             'view_path',
             'title',
             'route_name',
-            'data'
+            'data',
+            'list_type'
         ));
     }
 
     
     public function create()
     {
+        $list_type = $this->list_type;
         $path = $this->path;
         $view_path = $this->view_path;
-        $title = $this->title();
+        $title = $this->title;
         $route_name = $this->route_name;
         $model = new $this->model;
         $data = $model;
@@ -64,7 +69,8 @@ class ArticleController extends Controller
             'view_path',
             'title',
             'route_name',
-            'data'
+            'data',
+            'list_type'
         ));
     }
 
@@ -73,9 +79,8 @@ class ArticleController extends Controller
     {
         $model = new $this->model;
         $data = $request->except('_token','id');
-        $data['type'] = session()->get('article_type');
         if ($request->hasFile('images')) {
-            $images = Storage::disk('uploads')->put('/article', $request->images);
+            $images = Storage::disk('uploads')->put('/product', $request->images);
             $data['images'] = $images;
         }
         $model->create($data);
@@ -90,9 +95,10 @@ class ArticleController extends Controller
     
     public function edit($id)
     {
+        $list_type = $this->list_type;
         $path = $this->path;
         $view_path = $this->view_path;
-        $title = $this->title();
+        $title = $this->title;
         $route_name = $this->route_name;
         $model = new $this->model;
         $data = $model->find($id);
@@ -105,7 +111,8 @@ class ArticleController extends Controller
             'title',
             'route_name',
             'data',
-            'id'
+            'id',
+            'list_type'
         ));
     }
 
@@ -115,7 +122,7 @@ class ArticleController extends Controller
         $model = new $this->model;
         $data = $request->except('_token','id');
         if ($request->hasFile('images')) {
-            $images = Storage::disk('uploads')->put('/article', $request->images);
+            $images = Storage::disk('uploads')->put('/product', $request->images);
             $data['images'] = $images;
         }
         $model->find($id)->update($data);
@@ -129,19 +136,5 @@ class ArticleController extends Controller
         $model = new $this->model;
         $model->find($id)->delete();
         return redirect(route($this->route_name.'.index'));
-    }
-
-    public function title(){
-        $title = '';
-        if(session()->get('article_type') == '1'){
-            $title = 'ข่าวสารและกิจกรรม';
-        }else if(session()->get('article_type') == '2'){
-            $title = 'คู่มือการจัดการสวน';
-        }else if(session()->get('article_type') == '3'){
-            $title = 'เกตษรตัวอย่าง';
-        }else if(session()->get('article_type') == '4'){
-            $title = 'list';
-        }
-        return $title;
     }
 }

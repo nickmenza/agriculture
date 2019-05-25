@@ -19,7 +19,7 @@ class CreateArtical extends Migration
             $table->text('detail')->nullable();
             $table->string('images')->nullable();
             $table->date('date')->nullable();
-            $table->tinyInteger('type')->comment('1=ข่าวใหม่,2=คู่มือ,3=เกษตร'); 
+            $table->tinyInteger('type')->comment('1=ข่าวใหม่,2=คู่มือ,3=เกษตร,4=list people'); 
 
             $table->timestamps();
         });
