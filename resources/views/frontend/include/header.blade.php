@@ -30,7 +30,7 @@
         ],
     ];
 ?>
-<nav class="header" style="background-image: url('/images/h-home.png')">
+<nav class="header fixed-top " style="background-image: url('/images/h-home.png')">
     
 <div class="pos-f-t">
     <div class="collapse" id="navbarToggleExternalContent">
