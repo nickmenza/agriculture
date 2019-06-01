@@ -49,7 +49,7 @@
     <div class="row">
         @foreach ($garden as $item)
             
-        <div class="col-sm-6 col-md-4 mb-3">
+        <a href="{{url('garden/'.$item->id.'/'.Helper::make_slug($item->article_name))}}" class="col-sm-6 col-md-4 mb-3">
             @if(Storage::disk('uploads')->exists($item->images))
                 <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100">
             @else
@@ -61,14 +61,14 @@
             <h5>
                 {{$item->article_name}}
             </h5>
-            <label style="height: 55px;overflow: hidden;">
+            <label class="article-overflow">
                 {!! $item->detail !!}
             </label>
-            <a href="{{url('garden/'.$item->id.'/'.$item->article_name)}}" class="readme text-right pb-1">
+            <div class="readme text-right pb-1">
                 อ่านต่อ
                 <i class="fas fa-chevron-right"></i>
-            </a>
-        </div>
+            </div>
+        </a>
         @endforeach
 
     </div>

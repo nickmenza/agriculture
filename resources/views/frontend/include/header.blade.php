@@ -52,12 +52,14 @@
             </div>
         </div>
     </div>
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
             <a href="{{url('/contact')}}" class="h-contact">
                 ติดต่อเรา
             </a>
             <div class="main">
+                <a href="{{url('/')}}">
                 <img src="/images/logo.png" class="logo">
+                </a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>

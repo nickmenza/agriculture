@@ -50,6 +50,32 @@
     <!-- Template JS File -->
     {{ Html::script('stisla-master/assets/js/scripts.js') }}
     {{ Html::script('stisla-master/assets/js/custom.js') }}
+    <script>
+        $( document ).ready(function() {
+            var position = -1;
+            $( window ).scroll(function() {
+                $('#navbar').addClass('bg-color');
+                position = $(document).scrollTop()
+                // console.log(position)
+                // console.log('scroll')
+                
+                clearTimeout($.data(this, 'scrollTimer'));
+                $.data(this, 'scrollTimer', setTimeout(function() {
+                    // do something
+                    console.log(position,$(document).scrollTop())
+                    if(position === $(document).scrollTop()){
+                        $('#navbar').removeClass('bg-color');
+                    }
+                }, 250));
+                // setTimeout(() => {
+                //     if(position = $(document).scrollTop()){
+                //         $('#navbar').removeClass('bg-color');
+                //     }
+                // }, 3000);
+            });
+        })
+        
+    </script>
     @yield('more-script')
 
 </body>

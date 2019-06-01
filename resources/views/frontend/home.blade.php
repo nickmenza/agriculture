@@ -18,7 +18,7 @@
 </div>
 <div class="container pt-5 pb-5">
     {{-- <div style="margin-top: -70px;"></div> --}}
-    <div class="row con-b p-2" style="margin-top: -70px;z-index:0" style="background-color:white">
+    <div class="row con-b pt-3" style="margin-top: -70px;z-index:0" style="background-color:white">
         <div class="col-3 mb-3 text-center">
             <div class="background-new">
                 <img class="w-100 h-100" src="{{url('/images/h-about.png')}}">
@@ -194,7 +194,8 @@
 <div class="container pt-5 pb-5">
     <div class="row">
         @foreach ($garden as $item)
-        <a href="{{url('garden/'.$item->id.'/'.$item->article_name)}}" class="col-sm-6 col-md-4 mb-3">
+        
+        <a href="{{url('garden/'.$item->id.'/'.Helper::make_slug($item->article_name))}}" class="col-sm-6 col-md-4 mb-3">
             @if(Storage::disk('uploads')->exists($item->images))
                 <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100">
             @else
@@ -206,7 +207,7 @@
             <h5>
                 {{$item->article_name}}
             </h5>
-            <label style="height: 55px;overflow: hidden;">
+            <label class="article-overflow">
                 {!! $item->detail !!}
             </label>
             <div class="readme text-right pb-1">

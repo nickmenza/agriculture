@@ -22,36 +22,59 @@ p{
     position: fixed;
     width: 100%;
     background-color: rgba(255,255,255,0.7);
+    
     .navbar{
         left: 0;
         right: 0;
-        background-color: $color;
-        height: 60px;
+        height: 100px;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+        .navbar-toggler{
+            // margin-bottom: 30px;
+            i{
+                color: black;
+                font-size: 2rem;
+            }
+        }
+        &.bg-color{
+            background-color: $color;
+            .navbar-toggler{
+                i{
+                    color: white;
+                }
+            }
+        }
     }
-    
+    .collapse.show{
+        +.navbar{
+            background-color: $color;
+            .navbar-toggler{
+                // margin-bottom: 30px;
+                i{
+                    color: white;
+                }
+            }
+        }
+    }
     .logo{
         max-width: 100%;
         width: 75px;
     }
-    .navbar-toggler{
-        margin-bottom: 30px;
-        i{
-            color: white;
-            font-size: 2rem;
-        }
-    }
+    
     .h-contact{
         color: black;
         background-color: rgba($color: #fff, $alpha: 0.7);
         padding: 12px;
         border-radius: 20px;
-        margin-bottom: 30px;
-        border: 1px solid black;
+        // margin-bottom: 30px;
         &:hover{
             background-color: #fff;
             -moz-box-shadow:    inset 1px 1px 1px 1px #000000;
             -webkit-box-shadow: inset 1px 1px 1px 1px #000000;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            box-shadow: none;
+            // box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
         }
     }
     .header-link{
@@ -195,7 +218,8 @@ a{
  }
 
  .btn.btn-m, .btn-m.disabled {
-    box-shadow: 0 2px 6px $color;
+    box-shadow: none;
+    border-radius: 0;
     background-color: $color;
     border-color: $color;
     color: #fff;
@@ -206,10 +230,20 @@ a{
     }
 }
 
+.btn-dark, .btn-dark.disabled {
+    box-shadow: none;
+    border-radius: 0;
+}
+
 .b-hover{
     cursor: pointer;
     &:hover{
         background-color: $color;
         color: white;
     }
+}
+
+.article-overflow{
+    height: 44px;
+    overflow: hidden;
 }
