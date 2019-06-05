@@ -47,7 +47,7 @@
                 <h5>
                     {{$item->article_name}}
                 </h5>
-                <label style="height: 55px;overflow: hidden;">
+                <label class="article-overflow">
                     {!! $item->detail !!}
                 </label>
                 <div class="readme text-right pb-1">

@@ -19,7 +19,7 @@
 <div class="container pt-5 pb-5">
     {{-- <div style="margin-top: -70px;"></div> --}}
     <div class="row con-b pt-3" style="margin-top: -70px;z-index:0" style="background-color:white">
-        <div class="col-3 mb-3 text-center">
+        <div class="col-3 mb-3 text-center b-hover">
             <div class="background-new">
                 <img class="w-100 h-100" src="{{url('/images/h-about.png')}}">
                 <div class="b-detail">
@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <div class="col-6 mb-3 text-right">
+        <div class="col-6 mb-3 text-right b-hover">
             <div class="background-new">
                 <img class="w-100 h-100" src="{{url('/images/h-product.png')}}">
                 <div class="b-detail">
@@ -46,7 +46,7 @@
                         <div class="text-uppercase">
                             OUR PRODUCTs
                         </div>
-                        <a href="{{url('/product')}}" class="btn btn-m h6" style="width:120px">
+                        <a href="{{url('/product')}}" class="btn btn-dark h6 mt-2" style="width:120px">
                             ดูรายละเอียด
                         </a>
                     </div>
@@ -54,7 +54,7 @@
             </div>
         </div>
         
-        <div class="col-3 mb-3 text-center">
+        <div class="col-3 mb-3 text-center b-hover">
             <div class="background-new">
                 <img class="w-100 h-100" src="{{url('/images/h-location.png')}}">
                 <div class="b-detail">
@@ -103,7 +103,7 @@
         ?>
         @foreach ($list_a as $item)
             
-        <div class="col-6 col-md-3 mb-3 text-center">
+        <div class="col-6 col-md-3 mb-3 text-center b-hover">
             <div class="background-new">
                 <img class="w-100 h-100" src="{{$item['img']}}">
                 <div class="b-detail">
@@ -192,6 +192,13 @@
     </div>
 </div>
 <div class="container pt-5 pb-5">
+    <h3 class="text-center color-main">
+        คู่มือการจัดสวน
+    </h3>
+    <h6 class="text-center color-main">
+        GARDENING GUIDE
+    </h6>
+    <div class="row form-group"></div>
     <div class="row">
         @foreach ($garden as $item)
         

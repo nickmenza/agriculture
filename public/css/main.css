@@ -39,6 +39,7 @@ body {
 p {
   margin: 0;
   line-height: unset;
+  font-size: 18px;
 }
 
 .font-bold {
@@ -249,7 +250,7 @@ a:hover {
 .btn.btn-m:focus,
 .btn-m.disabled:hover,
 .btn-m.disabled:focus {
-  box-shadow: 0 2px 6px #0A4B31;
+  box-shadow: none;
   background-color: #0A4B31 !important;
   border-color: #0A4B31;
 }
@@ -270,7 +271,7 @@ a:hover {
 }
 
 .article-overflow {
-  height: 44px;
+  height: 55px;
   overflow: hidden;
 }
 

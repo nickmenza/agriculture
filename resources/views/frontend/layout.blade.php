@@ -53,25 +53,34 @@
     <script>
         $( document ).ready(function() {
             var position = -1;
+            var lastScrollTop = 0;
             $( window ).scroll(function() {
-                $('#navbar').addClass('bg-color');
-                position = $(document).scrollTop()
-                // console.log(position)
-                // console.log('scroll')
-                
-                clearTimeout($.data(this, 'scrollTimer'));
-                $.data(this, 'scrollTimer', setTimeout(function() {
-                    // do something
-                    console.log(position,$(document).scrollTop())
-                    if(position === $(document).scrollTop()){
-                        $('#navbar').removeClass('bg-color');
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop && st >= 100){
+                    if( !$('#navbar').hasClass('bg-color') ) {
+                        $('#navbar').addClass('bg-color');
                     }
-                }, 250));
-                // setTimeout(() => {
-                //     if(position = $(document).scrollTop()){
+                } else {
+                    // upscroll code
+                    if(st<100){
+                        if( $('#navbar').hasClass('bg-color') ) {
+                            $('#navbar').removeClass('bg-color');
+                        }
+                    }else{
+                    }
+                }
+                lastScrollTop = st;
+                // $('#navbar').addClass('bg-color');
+                // position = $(document).scrollTop()
+                
+                // clearTimeout($.data(this, 'scrollTimer'));
+                // $.data(this, 'scrollTimer', setTimeout(function() {
+                //     // do something
+                //     console.log(position,$(document).scrollTop())
+                //     if(position === $(document).scrollTop()){
                 //         $('#navbar').removeClass('bg-color');
                 //     }
-                // }, 3000);
+                // }, 250));
             });
         })
         

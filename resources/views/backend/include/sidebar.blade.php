@@ -7,11 +7,6 @@ $menu = [
         'link' => url($path.'/banner')
     ],
     [
-        'text' => 'listคนหน้าหลัก',
-        'icon' => 'fas fa-list',
-        'link' => url($path.'/article?article_type=4')
-    ],
-    [
         'text' => 'ข่าวสารและกิจกรรม',
         'icon' => 'fas fa-list',
         'link' => url($path.'/article?article_type=1')
@@ -27,7 +22,7 @@ $menu = [
         'link' => url($path.'/article?article_type=2')
     ],
     [
-        'text' => 'เกตษรตัวอย่าง',
+        'text' => 'เกษตรกรตัวอย่าง',
         'icon' => 'fas fa-list',
         'link' => url($path.'/article?article_type=3')
     ],

@@ -15,7 +15,7 @@ class HomeController extends Controller
 
     public function index(){
         $garden = Article::select()->where('type',2)->limit(3)->get();
-        $list_home = Article::select()->where('type',4)->get();
+        $list_home = Article::select()->where('type',3)->get();
 
         return view('frontend.home',compact('garden','list_home'));
     }

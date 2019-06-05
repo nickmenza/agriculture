@@ -89,6 +89,16 @@
   color: black;
 }
 
+.b-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.b-hover:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+  background-color: white;
+}
+
 .background-new {
   display: flex;
   position: relative;
@@ -130,12 +140,15 @@
 
 .owl-carousel .owl-item img {
   width: 150px !important;
+  height: 140px;
   margin: auto;
   margin-top: 70px;
+  border-radius: 100%;
 }
 
 .owl-carousel .owl-item.center img {
   width: 250px !important;
   margin-top: 0px;
+  height: 240px;
 }
 
