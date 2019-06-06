@@ -175,7 +175,8 @@
             @foreach ($list_home as $i => $item)
                 <div class="item"  data-position="{{$i}}">
                     @if(Storage::disk('uploads')->exists($item->images))
-                        <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100">
+                        {{-- <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100"> --}}
+                        <img src="{{Storage::disk('uploads')->url(str_replace('article/', 'article/300/', $item->images))}}" class="mb-1 w-100">
                     @else
                         <img src="https://via.placeholder.com/300x300" class="mb-1 w-100">
                     @endif
