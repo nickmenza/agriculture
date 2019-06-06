@@ -67,7 +67,7 @@
         <a class="col-sm-6 col-md-3 mb-3 text-center" href="#">
             <div style="background-color:white;color:black" class="shadow1 p-2">
                 @if(Storage::disk('uploads')->exists($item->images))
-                    <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100">
+                    <img src="{{Storage::disk('uploads')->url(str_replace('product/', 'product/300/', $item->images))}}" class="mb-1 w-100">
                 @else
                     <img src="https://via.placeholder.com/300x300" class="mb-1 w-100">
                 @endif

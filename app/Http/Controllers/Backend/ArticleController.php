@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Storage;
+use Image;
 class ArticleController extends Controller
 {
     public function __construct() {
@@ -75,8 +76,10 @@ class ArticleController extends Controller
         $data = $request->except('_token','id');
         $data['type'] = session()->get('article_type');
         if ($request->hasFile('images')) {
-            $images = Storage::disk('uploads')->put('/article', $request->images);
-            $data['images'] = $images;
+            $image_file_name = \Helper::upload_file($request->file('images'),'article/');
+            \Helper::upload_file($request->file('images'),'article/',300 ,str_replace('article/', '', $image_file_name));
+            $data['images'] = $image_file_name;
+
         }
         $model->create($data);
         return redirect(route($this->route_name.'.index'));
@@ -115,8 +118,9 @@ class ArticleController extends Controller
         $model = new $this->model;
         $data = $request->except('_token','id');
         if ($request->hasFile('images')) {
-            $images = Storage::disk('uploads')->put('/article', $request->images);
-            $data['images'] = $images;
+            $image_file_name = \Helper::upload_file($request->file('images'),'article/');
+            \Helper::upload_file($request->file('images'),'article/',300 ,str_replace('article/', '', $image_file_name));
+            $data['images'] = $image_file_name;
         }
         $model->find($id)->update($data);
         return redirect(route($this->route_name.'.index'));

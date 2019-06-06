@@ -39,11 +39,13 @@
     <div class="mb-1" style="color: #929292">
         {{Helper::DateFormatTh(Carbon\Carbon::parse($data->date)->format('d/m/Y'))}}
     </div>
+    <div class="d-flex justify-content-center">
     @if(Storage::disk('uploads')->exists($data->images))
-        <img src="{{Storage::disk('uploads')->url($data->images)}}" class="mb-2 w-100">
+        <img src="{{Storage::disk('uploads')->url($data->images)}}" class="mb-2" style="max-width:100%;">
     @else
         {{-- <img src="https://via.placeholder.com/300x300" class="mb-1 w-100"> --}}
     @endif
+    </div>
     <div class="mt-2">
         {!! $data->detail !!}
     </div>

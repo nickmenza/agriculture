@@ -39,7 +39,8 @@
                         <th class="text-center" scope="row">{{$item->id}}</th>
                         <th class="text-center" scope="row">
                             @if(Storage::disk('uploads')->exists($item->images))
-                            <img src="{{Storage::disk('uploads')->url($item->images)}}" style="width:150px">
+                            <img src="{{Storage::disk('uploads')->url(str_replace('article/', 'article/300/', $item->images))}}" class="mb-1" style="width:150px">
+                            {{-- <img src="{{Storage::disk('uploads')->url($item->images)}}" style="width:150px"> --}}
                             @endif
                         </th>
                         <td>{{$item->article_name}}</td>

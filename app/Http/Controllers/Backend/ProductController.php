@@ -64,8 +64,9 @@ class ProductController extends Controller
         $model = new $this->model;
         $data = $request->except('_token','id');
         if ($request->hasFile('images')) {
-            $images = Storage::disk('uploads')->put('/product', $request->images);
-            $data['images'] = $images;
+            $image_file_name = \Helper::upload_file($request->file('images'),'product/');
+            \Helper::upload_file($request->file('images'),'product/',300 ,str_replace('product/', '', $image_file_name));
+            $data['images'] = $image_file_name;
         }
         $model->create($data);
         return redirect(route($this->route_name.'.index'));
@@ -104,8 +105,11 @@ class ProductController extends Controller
         $model = new $this->model;
         $data = $request->except('_token','id');
         if ($request->hasFile('images')) {
-            $images = Storage::disk('uploads')->put('/product', $request->images);
-            $data['images'] = $images;
+            // $images = Storage::disk('uploads')->put('/product', $request->images);
+            // $data['images'] = $images;
+            $image_file_name = \Helper::upload_file($request->file('images'),'product/');
+            \Helper::upload_file($request->file('images'),'product/',300 ,str_replace('product/', '', $image_file_name));
+            $data['images'] = $image_file_name;
         }
         $model->find($id)->update($data);
         return redirect(route($this->route_name.'.index'));

@@ -3,7 +3,8 @@
 namespace App\Helpers;
 
 use Carbon\Carbon;
-
+use Image;
+use File;
 class Helper
 {
     static $month = [
@@ -176,4 +177,20 @@ class Helper
         return preg_replace('/\s+/u', '-', trim($string));
     }
     
+    public static function upload_file($image ,$path_file,$size=null,$name_de = null){
+        $filename  = date('Y-m-d').time(). rand(10000,100000). '.' . $image->getClientOriginalExtension();
+        if($name_de){
+            $filename = $name_de;
+        }
+        if($size){
+            $path = public_path('uploads/'.$path_file.'/'.$size.'/');
+            File::isDirectory($path) or File::makeDirectory($path, 0777, true, true);
+            Image::make($image->getRealPath())->resize($size, $size)->save($path.$filename);
+        }else{
+            $path = public_path('uploads/'.$path_file. $filename);
+            Image::make($image->getRealPath())->save($path);
+        }
+        return $path_file.$filename;
+    }
+
 }
