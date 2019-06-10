@@ -54,7 +54,7 @@
 
 
 @section('body')
-@component('frontend.component.highlight',['text_th'=>'เกี่ยวกับเรา','text_en'=>'ABOUT US'])
+@component('frontend.component.highlight',['text_th'=>'เกี่ยวกับเรา','text_en'=>'ABOUT US','type'=>2])
 @endcomponent
 
 <div class="bg-img" style="background-image: url('/images/bg1.png')">

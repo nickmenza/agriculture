@@ -140,10 +140,10 @@
         @foreach ($list as $i => $item)
         <div class="row box-swap">
             <div class="col-md-6 col-12 box-text">
-                <h4 class="color-main">
+                <h4 class="color-main m-0">
                     {{$item['header']}}
                 </h4>
-                <div class="color-main">
+                <div class="color-main mb-2">
                     {{$item['header1']}}
                 </div>
                 <div>

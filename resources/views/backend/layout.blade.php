@@ -37,6 +37,7 @@
             }
             body{
                 background-color: #ededed;
+                font-size: 18px;
             }
             .section-body{
                 background-color: white;

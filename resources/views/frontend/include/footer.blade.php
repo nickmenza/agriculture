@@ -25,6 +25,10 @@
             'link' => url('/news'),
         ],
         [
+            'text' => 'ร่วมงานกับเรา',
+            'link' => url('/career'),
+        ],
+        [
             'text' => 'ติดต่อเรา',
             'link' => url('/contact'),
         ],
