@@ -106,7 +106,7 @@
     </div>
 </div>
 
-<div class="pallex1" style="background-image: url('/images/h-home.png');position: relative;">
+<div class="pallex1" style="background-image: url('/images/bg-timeline.png');position: relative;">
     <div class="w-100 h-100 pt-4 pb-4" style="position: absolute;background: rgba(255, 255, 255, 0.4);">
         <div class="container text-center">
             <h4>

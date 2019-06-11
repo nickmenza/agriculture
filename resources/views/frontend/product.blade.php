@@ -35,7 +35,7 @@
     
 @endcomponent
 
-<div class="bg-img" style="background-image: url('/images/bg1.png')">
+<div class="bg-img" style="background-image: url('/images/bg-ourproduct.png')">
 <div class="container pt-5 pb-5">
     <div class="row">
         @foreach ($products as $item)
