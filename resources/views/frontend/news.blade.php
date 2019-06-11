@@ -33,7 +33,7 @@
 
 
 <div class="container pt-5 pb-5">
-    <div class="row">
+    <div class="row article1">
         @foreach ($news as $item)
         <a href="{{url('news/'.$item->id.'/'.$item->article_name)}}" class="col-sm-6 col-md-4 mb-3">
             @if(Storage::disk('uploads')->exists($item->images))

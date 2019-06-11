@@ -39,7 +39,7 @@
 <div class="container pt-5 pb-5" style="backgroud">
     <div class="row">
         <div class="col-md-4">
-            <div style="background-color:white;color:black" class="shadow1 p-2">
+            <div style="background-color:white;color:black" class=" p-2">
                 @if(Storage::disk('uploads')->exists($data->images))
                 <img src="{{Storage::disk('uploads')->url($data->images)}}" class="mb-1 w-100">
                 @else
@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="col-md-8">
-            <h5 class="color-main mt-2">{{$data->product_name}} ( {{$data->product_name_en}} )</h5>
+            <h4 class="color-main mt-2">{{$data->product_name}} ( {{$data->product_name_en}} )</h4>
             <h5 class="">ชื่อเดิม ​: {{$data->product_name_old}}</h5>
             <div class="form-group">
             </div>
@@ -62,10 +62,10 @@
 
 <div class="container pt-5 pb-5">
     <h5 class="text-center color-main pb-3">ผลิตภัณฑ์แนะนำ</h5>
-    <div class="row">
+    <div class="row article1">
         @foreach ($products as $item)
         <a class="col-sm-6 col-md-3 mb-3 text-center" href="#">
-            <div style="background-color:white;color:black" class="shadow1 p-2">
+            <div style="background-color:white;color:black" class="p-2">
                 @if(Storage::disk('uploads')->exists($item->images))
                     <img src="{{Storage::disk('uploads')->url(str_replace('product/', 'product/300/', $item->images))}}" class="mb-1 w-100">
                 @else

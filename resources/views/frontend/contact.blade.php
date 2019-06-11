@@ -105,7 +105,8 @@
 </div>
 
 <div >
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3875.8546731439196!2d100.619237!3d13.727247!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7f773cbadd9e22ef!2sZen+Corporation+Group!5e0!3m2!1sen!2sth!4v1542353128915" style="width:100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6685.130167139531!2d100.58036850613647!3d13.7446546088866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQ0JzQzLjAiTiAxMDDCsDM0JzQ2LjEiRQ!5e0!3m2!1sen!2sth!4v1560170983788!5m2!1sen!2sth" style="width:100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3875.8546731439196!2d100.619237!3d13.727247!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7f773cbadd9e22ef!2sZen+Corporation+Group!5e0!3m2!1sen!2sth!4v1542353128915" style="width:100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> --}}
 </div>
 
 

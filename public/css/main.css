@@ -284,3 +284,7 @@ a:hover {
   overflow: hidden;
 }
 
+.article1 img {
+  max-height: 300px;
+}
+

@@ -47,12 +47,13 @@
 <div class="container pb-5">
     <h5 class="text-center color-main">บทความล่าสุด</h5>
     <div class="row form-group"></div>
-    <div class="row">
+    <div class="row article1">
         @foreach ($garden as $item)
             
         <a href="{{url('garden/'.$item->id.'/'.Helper::make_slug($item->article_name))}}" class="col-sm-6 col-md-4 mb-3">
             @if(Storage::disk('uploads')->exists($item->images))
-                <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100">
+                {{-- <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100"> --}}
+                <img src="{{Storage::disk('uploads')->url(str_replace('article/', 'article/300/', $item->images))}}" class="mb-1 w-100">
             @else
                 <img src="https://via.placeholder.com/300x300" class="mb-1 w-100">
             @endif

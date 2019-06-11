@@ -47,6 +47,14 @@
                             <img id="blah" style="width:150px">
                         @endif
                 </div>
+                <div class="col-12 mt-2">
+                    <div class="row">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                        <div class="col-sm-12 col-md-7 text-danger">
+                            แนะนำขนาดรูป 800 x 600 px
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="form-group row mb-4">
                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>

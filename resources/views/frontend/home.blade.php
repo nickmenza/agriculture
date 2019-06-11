@@ -19,9 +19,9 @@
 <div class="container pt-5 pb-5">
     {{-- <div style="margin-top: -70px;"></div> --}}
     <div class="row con-b pt-3" style="margin-top: -70px;z-index:0" style="background-color:white">
-        <div class="col-3 mb-3 text-center b-hover">
-            <div class="background-new">
-                <img class="w-100 h-100" src="{{url('/images/h-about.png')}}">
+        <a href="{{url('about-us')}}" class="order-2 order-md-1 col-6 col-md-3 mb-3 text-center b-hover" >
+            <div class="background-new" style="background-image: url({{url('/images/h-about.png')}})">
+                {{-- <img class="w-100 h-100" src="{{url('/images/h-about.png')}}"> --}}
                 <div class="b-detail">
                     <div class="box justify-content-end">
                         <div class="h5 mb-1">
@@ -33,11 +33,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
 
-        <div class="col-6 mb-3 text-right b-hover">
-            <div class="background-new">
-                <img class="w-100 h-100" src="{{url('/images/h-product.png')}}">
+        <a href="{{url('product')}}"  class="order-1 order-md-2 col-md-6 mb-3 text-right b-hover">
+            <div class="background-new" style="background-image: url({{url('/images/h-product.png')}})">
+                {{-- <img class="w-100 h-100" src="{{url('/images/h-product.png')}}"> --}}
                 <div class="b-detail">
                     <div class="box justify-content-center align-items-end">
                         <div class="h5 mb-1">
@@ -46,17 +46,17 @@
                         <div class="text-uppercase">
                             OUR PRODUCTs
                         </div>
-                        <a href="{{url('/product')}}" class="btn btn-dark h6 mt-2" style="width:120px">
+                        <div href="{{url('/product')}}" class="btn btn-dark h6 mt-2" style="width:120px">
                             ดูรายละเอียด
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
         
-        <div class="col-3 mb-3 text-center b-hover">
-            <div class="background-new">
-                <img class="w-100 h-100" src="{{url('/images/h-location.png')}}">
+        <a href="{{url('location')}}" class="order-3 order-md-3 col-6 col-md-3 mb-3 text-center b-hover">
+            <div class="background-new" style="background-image: url({{url('/images/h-location.png')}})">
+                {{-- <img class="w-100 h-100" src="{{url('/images/h-location.png')}}"> --}}
                 <div class="b-detail">
                     <div class="box">
                         <div class="h5 mb-1">
@@ -68,7 +68,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
         
         <?php
         $list_a = [
@@ -76,36 +76,41 @@
                 'text' => 'คู่มือการจัดการสวน',
                 'text_en' => 'garden management',
                 'img' => url('/images/h-garden.png'),
-                'cls' => ''
+                'cls' => '',
+                'url' => url('/garden'),
 
             ],
             [
                 'text' => 'เกษตรตัวอย่าง',
                 'text_en' => 'OUR AGRiculturust',
                 'img' => url('/images/h-ag.png'),
-                'cls' => ''
+                'cls' => '',
+                'url' => url('/agriculturist'),
 
             ],
             [
                 'text' => 'ข่าวสารและกิจกรรม',
                 'text_en' => 'news and event',
                 'img' => url('/images/h-new.png'),
-                'cls' => 'justify-content-end'
+                'cls' => 'justify-content-end',
+                'url' => url('/news'),
 
             ],
             [
                 'text' => 'ร่วมงานกับเรา',
                 'text_en' => 'career',
                 'img' => url('/images/h-career.png'),
-                'cls' => 'justify-content-end'
+                'cls' => 'justify-content-end',
+                'url' => url('/career'),
+
             ],
         ]
         ?>
         @foreach ($list_a as $item)
             
-        <div class="col-6 col-md-3 mb-3 text-center b-hover">
-            <div class="background-new">
-                <img class="w-100 h-100" src="{{$item['img']}}">
+        <a href="{{$item['url']}}" class="order-4 col-6 col-md-3 mb-3 text-center b-hover">
+            <div class="background-new more" style="background-image: url({{$item['img']}});">
+                {{-- <img class="w-100 h-100" src="{{$item['img']}}"> --}}
                 <div class="b-detail">
                     <div class="box {{$item['cls']}}">
                         <div class="h5 mb-1">
@@ -117,7 +122,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
         @endforeach
     </div>
 </div>
@@ -200,7 +205,7 @@
         GARDENING GUIDE
     </h6>
     <div class="row form-group"></div>
-    <div class="row">
+    <div class="row article">
         @foreach ($garden as $item)
         
         <a href="{{url('garden/'.$item->id.'/'.Helper::make_slug($item->article_name))}}" class="col-sm-6 col-md-4 mb-3">
