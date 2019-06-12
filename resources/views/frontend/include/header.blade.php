@@ -68,11 +68,11 @@
     </div>
 </nav> --}}
 
-<button id="button-nav" class="hamburger">
+<div id="button-nav" class="hamburger">
     <span class="burger"></span>
     <span class="burger"></span>
     <span class="burger"></span>
-</button>
+</div>
     
 <div class="content" id="nav-content">
     <div class="flex">

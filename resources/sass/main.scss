@@ -265,7 +265,7 @@ a{
     }
 }
 
-$burgerheight:5px;
+$burgerheight:4px;
 $burger:#FFF;
 $red:#FF5757;
 
@@ -308,6 +308,7 @@ $red:#FF5757;
     li {
       padding:10px;
       text-align: left;
+      line-height: 1.5;
     }
     a {
     //   color:lighten(#121212,25%);

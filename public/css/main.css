@@ -330,6 +330,7 @@ a:hover {
 .content .navigation li {
   padding: 10px;
   text-align: left;
+  line-height: 1.5;
 }
 
 .content .navigation a {
@@ -382,7 +383,7 @@ a:hover {
 .hamburger .burger {
   transition: all 0.3s;
   border-radius: 5px;
-  height: 5px;
+  height: 4px;
   width: 100%;
   display: inline-block;
   background-color: #000000;
