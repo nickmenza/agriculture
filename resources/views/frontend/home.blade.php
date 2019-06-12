@@ -207,7 +207,7 @@
         GARDENING GUIDE
     </h6>
     <div class="row form-group"></div>
-    <div class="row article">
+    <div class="row article1">
         @foreach ($garden as $item)
         
         <a href="{{url('garden/'.$item->id.'/'.Helper::make_slug($item->article_name))}}" class="col-sm-6 col-md-4 mb-3">
