@@ -286,6 +286,7 @@ a:hover {
 .article-overflow {
   height: 55px;
   overflow: hidden;
+  width: 100%;
 }
 
 .article1 img {
