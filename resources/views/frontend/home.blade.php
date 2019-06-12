@@ -191,6 +191,8 @@
         <div class="owl-carousel owl-theme" id="owl-text">
             @foreach ($list_home as $i => $item)
                 <div class="item text-center" id="text{{$i}}" data-position1="{{$i}}">
+                    {!! $item->article_name !!}
+                    <br>
                     {!! $item->detail !!}
                 </div>
             @endforeach

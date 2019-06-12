@@ -15,5 +15,6 @@ mix.js('resources/js/app.js', 'public/js')
         .sass('resources/sass/font.scss', 'public/css')
         .sass('resources/sass/home.scss', 'public/css')
         .sass('resources/sass/contact.scss', 'public/css')
+        .sass('resources/sass/about-us.scss', 'public/css')
         .sass('resources/sass/main.scss', 'public/css');
    

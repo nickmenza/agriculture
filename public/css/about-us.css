@@ -1,0 +1,165 @@
+body h1 {
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.progressbar {
+  counter-reset: step;
+  padding: 0;
+  counter-increment: step 2547;
+}
+
+.progressbar li {
+  list-style-type: none;
+  float: left;
+  width: 33.33%;
+  position: relative;
+  text-align: center;
+  letter-spacing: 2px;
+  height: 240px;
+}
+
+@media (max-width: 991.98px) {
+  .progressbar li {
+    width: 50%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .progressbar li {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 60px;
+  height: 55px;
+  line-height: 50px;
+  border: 3px solid #0A4B31;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: #fff;
+  letter-spacing: 0px;
+}
+
+.progressbar li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #0A4B31;
+  top: 25px;
+  left: 0%;
+  z-index: -1;
+}
+
+.progressbar li:first-child:after {
+  right: 0;
+  left: 15%;
+}
+
+@media (max-width: 768.98px) {
+  .progressbar li:first-child:after {
+    left: 19%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .progressbar li:first-child:after {
+    left: 0;
+  }
+}
+
+.progressbar li:last-child:after {
+  right: 0;
+  left: -15%;
+}
+
+@media (max-width: 768.98px) {
+  .progressbar li:last-child:after {
+    left: -19%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .progressbar li:last-child:after {
+    left: 0;
+  }
+}
+
+.progressbar li:first-child i {
+  position: absolute;
+  left: 43px;
+  top: 14px;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 575.98px) {
+  .progressbar li:first-child i {
+    left: 0;
+  }
+}
+
+.progressbar li:last-child i {
+  position: absolute;
+  right: 43px;
+  top: 14px;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 575.98px) {
+  .progressbar li:last-child i {
+    right: -5px;
+  }
+}
+
+.progressbar li.active {
+  color: #0A4B31;
+}
+
+.progressbar li.active:before {
+  border-color: #0A4B31;
+}
+
+.progressbar li.active + li:after {
+  background-color: #0A4B31;
+}
+
+.progressbar .detail {
+  color: black;
+  font-size: 14px;
+  text-align: left;
+  padding: 10px;
+}
+
+.pallex1 {
+  min-height: 650px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 991.98px) {
+  .pallex1 {
+    min-height: 800px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .pallex1 {
+    min-height: 1000px;
+  }
+}
+

@@ -82,6 +82,16 @@
                 //     }
                 // }, 250));
             });
+            $("#button-nav").click(function() {
+                console.log('test')
+                $(".hamburger").toggleClass("focus");
+                $(".content").toggleClass("show");
+            });
+            $('#nav-content').click(function() {
+                console.log('test')
+                $(".hamburger").toggleClass("focus");
+                $(".content").toggleClass("show");
+            });
         })
         
     </script>
