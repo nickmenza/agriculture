@@ -27,7 +27,7 @@
                         <div class="h5 mb-1">
                             เกี่ยวกับเรา
                         </div>
-                        <div class="text-uppercase">
+                        <div class="text-uppercase" style="font-size:12px">
                             about us
                         </div>
                     </div>
@@ -43,10 +43,10 @@
                         <div class="h5 mb-1">
                             ผลิตภัณฑ์ของเรา
                         </div>
-                        <div class="text-uppercase">
+                        <div class="text-uppercase" style="font-size:12px">
                             OUR PRODUCTs
                         </div>
-                        <div href="{{url('/product')}}" class="btn btn-dark h6 mt-2" style="width:120px">
+                        <div href="{{url('/product')}}" class="btn btn-dark h6 mt-2" style="width:120px; font-size:14px">
                             ดูรายละเอียด
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                         <div class="h5 mb-1">
                             ศูนย์กล้าปาล์มน้ำมัน
                         </div>
-                        <div class="text-uppercase">
+                        <div class="text-uppercase" style="font-size:12px">
                             old palm plantation center
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                         <div class="h5 mb-1">
                             {{$item['text']}}
                         </div>
-                        <div class="text-uppercase">
+                        <div class="text-uppercase" style="font-size:12px">
                             {{$item['text_en']}}
                         </div>
                     </div>
@@ -143,18 +143,19 @@
             ];
         ?>
         @foreach ($list as $i => $item)
-        <div class="row box-swap">
+        <div class="row box-swap" style="margin-bottom:15px">
             <div class="col-md-6 col-12 box-text">
                 <h4 class="color-main m-0">
                     {{$item['header']}}
                 </h4>
-                <div class="color-main mb-2">
+                <div class="color-main mb-2" style="font-size:12px">
                     {{$item['header1']}}
                 </div>
-                <div>
+                <div style="font-size:15px">
                     {{$item['detail']}}
                 </div>
             </div>
+
             <div class="col-md-6 col-12 box-img">
                 @if($i%2 != 0)
                 <div class="line">
@@ -217,7 +218,7 @@
             @else
                 <img src="https://via.placeholder.com/300x300" class="mb-1 w-100">
             @endif
-            <h5 class="color-main">
+            <h5 class="color-main" style="font-size:14px">
                 {{Carbon\Carbon::parse($item->date)->format('F d, Y')}}
             </h5>
             <h5>
@@ -226,7 +227,7 @@
             <label class="article-overflow">
                 {!! $item->detail !!}
             </label>
-            <div class="readme text-right pb-1">
+            <div class="readme text-right pb-1" style="font-size:14px">
                 อ่านต่อ
                 <i class="fas fa-chevron-right"></i>
             </div>
