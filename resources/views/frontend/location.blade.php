@@ -51,7 +51,7 @@
             @foreach ($data as $key => $item)
                 <div class="accordion-body collapse @if($key==0){{"show"}}@endif" id="panel-body-{{$key}}" data-parent="#accordion" style="">
 
-                    <h6 class="color-main">{{$item['title']}}</h6>
+                    <h5 class="color-main">{{$item['title']}}</h5>
                     <hr class="mt-2 mb-2" style="border-top: 1px solid #0A4B31">
                     
                     <div class="d-flex mb-2">
