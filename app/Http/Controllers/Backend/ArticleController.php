@@ -142,7 +142,7 @@ class ArticleController extends Controller
         }else if(session()->get('article_type') == '2'){
             $title = 'คู่มือการจัดการสวน';
         }else if(session()->get('article_type') == '3'){
-            $title = 'เกตษรตัวอย่าง';
+            $title = 'เกตษรกรตัวอย่าง';
         }else if(session()->get('article_type') == '4'){
             $title = 'list';
         }
