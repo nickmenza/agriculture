@@ -148,7 +148,7 @@
                 <h4 class="color-main m-0">
                     {{$item['header']}}
                 </h4>
-                <div class="color-main mb-2" style="font-size:12px">
+                <div class="color-main mb-2" style="font-size:13px">
                     {{$item['header1']}}
                 </div>
                 <div style="font-size:15px">
