@@ -12,7 +12,7 @@ $menu = [
         'link' => url($path.'/article?article_type=1')
     ],
     [
-        'text' => 'ผลิตภัทณ์',
+        'text' => 'ผลิตภัณฑ์',
         'icon' => 'fas fa-list',
         'link' => url($path.'/products')
     ],
