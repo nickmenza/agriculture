@@ -13,7 +13,7 @@
             'link' => url('/agriculturist'),
         ],
         [
-            'text' => 'ศูนย์กลางปาล์มน้ำมัน',
+            'text' => 'ศูนย์กล้าปาล์มน้ำมัน',
             'link' => url('/location'),
         ],
         [
