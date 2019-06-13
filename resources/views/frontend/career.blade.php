@@ -42,7 +42,7 @@
 <div class="container pt-5 pb-5">
     <div class="row" id="accordion">
         <div class="col-5">
-            <h6 class="color-main">ตำแหน่งที่เปิดรับ</h6>
+            <h5 class="color-main">ตำแหน่งที่เปิดรับ</h5>
             <hr class="mt-1 mb-1">
             @foreach ($data as $key => $item)
                 <div class="accordion-header" role="button" data-toggle="collapse" data-target="#panel-body-{{$key}}" aria-expanded="@if($key==0){{"true"}}@else{{"false"}}@endif">
@@ -54,11 +54,11 @@
         <div class="col-7">
             @foreach ($data as $key => $item)
                 <div class="accordion-body collapse @if($key==0){{"show"}}@endif" id="panel-body-{{$key}}" data-parent="#accordion" style="">
-                    <h6 class="color-main">คำอธิบายตำแหน่ง</h6>
+                    <h5 class="color-main">คำอธิบายตำแหน่ง</h5>
                     <div class="pl-3">{{$item->detail}}</div>
-                    <h6 class="color-main">สถานที่</h6>
+                    <h5 class="color-main">สถานที่</h5>
                     <div class="pl-3">{{$item->location}}</div>
-                    <h6 class="color-main">คุณสมบัติ</h6>
+                    <h5 class="color-main">คุณสมบัติ</h5>
                     <div class="pl-3">{!!$item->property!!}</div>
                     <div class="form-group"></div>
                     <div class="text-center">
