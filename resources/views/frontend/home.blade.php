@@ -81,7 +81,7 @@
 
             ],
             [
-                'text' => 'เกษตรตัวอย่าง',
+                'text' => 'เกษตรกรตัวอย่าง',
                 'text_en' => 'OUR AGRiculturust',
                 'img' => url('/images/h-ag.png'),
                 'cls' => '',
