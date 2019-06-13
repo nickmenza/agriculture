@@ -46,10 +46,10 @@
                 @else
                     <img src="https://via.placeholder.com/300x300" class="mb-1 w-100">
                 @endif
-                <div>
+                <div style="font-size:18px">
                     {{$item->product_name}}
                 </div>
-                <div class="color-main">
+                <div class="color-main" style="font-size:14px">
                     {{$item->product_name_en}}
                 </div>
             </div>
