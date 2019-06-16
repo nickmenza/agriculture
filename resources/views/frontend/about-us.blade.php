@@ -97,25 +97,8 @@
     </div>
 </div>
 
-{{-- <div style="background-image: url('/images/bg-timeline.png');height:400px;">
-    <div class="">
-        <ul class="progressbar">
-            <li class="active">Designer at Google</li>
-            <li class="active">Freelance Developer</li>
-            <li>Microsoft ???</li>
-        </ul>
-    </div>
-</div> --}}
-{{-- <div class="">
-    <ul class="progressbar">
-        <li class="active">Designer at Google</li>
-        <li class="active">Freelance Developer</li>
-        <li>Microsoft ???</li>
-    </ul>
-</div> --}}
 
-
-<div class="pallex1" style="background-image: url('/images/bg-timeline.png');position: relative;z-index:-2;overflow: hidden;">
+{{-- <div class="pallex1" style="background-image: url('/images/bg-timeline.png');position: relative;z-index:-2;overflow: hidden;">
     <div class="w-100 h-100 pt-4 pb-4" style="position: absolute;background: rgba(255, 255, 255, 0.4);">
         <div class="container text-center">
             <h4>
@@ -167,7 +150,76 @@
             </ul>
         </div>
     </div>
-</div>
+</div> --}}
+{{-- <div class="pallex1" style="background-image: url('/images/bg-timeline.png');position: relative;z-index:-2">
+    <div class="w-100 h-100 pt-4 pb-4" style="position: absolute;background: rgba(255, 255, 255, 0.4);"> --}}
+        <div class="container text-center">
+            <div class="project-timeline">
+                <div class="step">
+                    <div class="number">
+                        <div class="circle">
+                            2548
+                        </div>
+                    </div>
+                    <div class="content-timeline">
+                            <div class="color-main">ก่อตั้งบริษัทอาร์แอนด์ดี เกษตรพัฒนา จำกัด</div>
+                            - สำนักงานใหญ่ กรุงเทพฯ<br>
+                            - ศูนย์สวี บนพื้นที่ 37 ไร่<br>
+                            - ศูนย์ละแม บนพื้นที่ 200 ไร่<br>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="number">
+                        <div class="circle">
+                            2552
+                        </div>
+                    </div>
+                    <div class="content-timeline">
+                            ศูนย์ปะทิว จุดพักกล้า บนพื้นที่ 100 ไร่
+
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="number">
+                        <div class="circle">
+                            2556
+                        </div>
+                    </div>
+                    <div class="content-timeline">
+                            ศูนย์ปราจีนบุรี บนพื้นที่ 3000 ไร่
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="number">
+                        <div class="circle">
+                            2558
+                        </div>
+                    </div>
+                    <div class="content-timeline">
+                            <div class="color-main">
+                                เข้าซื้อกิจการบริษัท พาราเม้าท์ ออยล์ จำกัด และ
+                                เปลี่ยนชื่อทั้ง 3 แห่งเป็น บริษัท อาร์ดี เกษตรพัฒนา จำกัด
+                            </div>
+                            -	ศูนย์พัทลุง บนพื้นที่ 200 ไร่<br>
+                            -	ศูนย์รัตภูมิ บนพื้นที่ 9 ไร่<br>
+                            -	ศูนย์บ่อล้อ บนพื้นที่ 19 ไร่<br>
+                            -	เปิดแปลงทดสอบสายพันธุ์ ศูนย์นครนายก บนพื้นที่ 1600 ไร่<br>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="number">
+                        <div class="circle">
+                            2559
+                        </div>
+                    </div>
+                    <div class="content-timeline">
+                            ศูนย์สตูล บนพื้นที่ 2350 ไร่ 
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{-- </div>
+</div> --}}
 
 @endsection
 
