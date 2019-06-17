@@ -192,3 +192,10 @@
   height: 240px;
 }
 
+@media (max-width: 575.98px) {
+  .owl-carousel .owl-item.center img {
+    width: 200px !important;
+    height: 190px;
+  }
+}
+

@@ -50,6 +50,8 @@
     <!-- Template JS File -->
     {{ Html::script('stisla-master/assets/js/scripts.js') }}
     {{ Html::script('stisla-master/assets/js/custom.js') }}
+    {{ Html::script('js/app.js') }}
+    <script id="salesdesk-widget-script" src="https://api-salesdesk.readyplanet.com/js/salesdesk-widget-v2.min.js?business_id=6aff2496603639d45b9f965aea273b2a" type="text/javascript" charset="UTF-8"></script>
     <script>
         $( document ).ready(function() {
             var position = -1;

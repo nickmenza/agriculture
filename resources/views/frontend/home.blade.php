@@ -249,9 +249,13 @@
             items:2,
             loop:true,
             margin:10,
+            autoplay:true,
             responsive:{
-                600:{
+                768:{
                     items:3
+                },
+                500:{
+                    items:1
                 }
             }
         });
@@ -260,8 +264,12 @@
             items:2,
             loop:true,
             margin:10,
+            autoplay:true,
             responsive:{
-                600:{
+                768:{
+                    items:3
+                },
+                500:{
                     items:1
                 }
             }

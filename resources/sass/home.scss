@@ -181,12 +181,19 @@
             margin: auto;
             margin-top: 70px;
             border-radius: 100%;
+            @media (max-width: 575.98px) {
+
+            }
         }
         &.center{
             img{
                 width: 250px !important;
                 margin-top: 0px;
                 height: 240px;
+                @media (max-width: 575.98px) {
+                    width: 200px !important;
+                    height: 190px;
+                }
             }
         }
     }

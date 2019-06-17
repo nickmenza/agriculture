@@ -183,6 +183,20 @@ a:hover {
   border-top-width: 720px;
 }
 
+@media (max-width: 767.98px) {
+  .highlight.main {
+    background-size: 100% auto;
+    background-position: center top;
+    min-height: 300px !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .highlight.main {
+    min-height: 150px !important;
+  }
+}
+
 .triangle-fluid {
   background: transparent url("http://placekitten.com/g/1200/500") center center;
   background-size: cover;
@@ -373,7 +387,7 @@ a:hover {
   outline: 0px;
   width: 50px;
   height: 50px;
-  position: fixed;
+  position: absolute;
   top: 15px;
   right: 15px;
   cursor: pointer;
@@ -394,11 +408,11 @@ a:hover {
 }
 
 .focus .burger:first-of-type {
-  background-color: #FF5757;
+  background-color: #0A4B31;
   transition-delay: 0.4s;
   -webkit-transform: translate3d(0px, 0px, 0px) rotateZ(45deg);
           transform: translate3d(0px, 0px, 0px) rotateZ(45deg);
-  width: 40px;
+  width: 36px;
   -webkit-transform-origin: left top;
           transform-origin: left top;
 }
@@ -408,11 +422,11 @@ a:hover {
 }
 
 .focus .burger:last-of-type {
-  background-color: #FF5757;
+  background-color: #0A4B31;
   transition-delay: 0.4s;
   -webkit-transform: translate3d(0px, 0px, 0px) rotateZ(-45deg);
           transform: translate3d(0px, 0px, 0px) rotateZ(-45deg);
-  width: 40px;
+  width: 36px;
   -webkit-transform-origin: left bottom;
           transform-origin: left bottom;
 }

@@ -37,21 +37,35 @@
 
 <div class="container pt-5 pb-5">
     <div class="row" id="accordion">
-        <div class="col-5">
-            <h6 class="m-0 p-2" style="color:white;background-color:#0A4B31">ติดต่อสำนักงานขาย</h6>
-            <hr class="mt-1 mb-1">
-            @foreach ($data as $key => $item)
-                <div class="accordion-header p-2 b-hover" role="button" data-toggle="collapse" data-target="#panel-body-{{$key}}" aria-expanded="@if($key==0){{"true"}}@else{{"false"}}@endif">
-                    {{$item['title']}}
-                </div>
-            @endforeach
+        <div class="col-md-5 form-group">
+            <div class="d-none d-md-block">
+                <h5 class="m-0 p-2" style="color:white;background-color:#0A4B31">ติดต่อสำนักงานขาย</h5>
+                <hr class="mt-1 mb-1">
+                @foreach ($data as $key => $item)
+                    <div class="accordion-header p-2 b-hover" role="button" v-on:click="click('{{$key}}')"
+                    {{-- data-toggle="collapse" data-target="#panel-body-{{$key}}" --}}
+                    aria-expanded="@if($key==0){{"true"}}@else{{"false"}}@endif">
+                        {{$item['title']}}
+                    </div>
+                @endforeach
+            </div>
+            <div class="d-block d-md-none">
+                <h5 class="m-0 p-2 color-main">ติดต่อสำนักงานขาย</h5>
+                <select class="form-control" id="mobile-select" :v-model="selected" v-on:change="change">
+                    @foreach ($data as $key => $item)
+                    <option value="{{$key}}">
+                        {{$item['title']}}
+                    </option>
+                    @endforeach
+                </select>
+            </div>
             
         </div>
-        <div class="col-7">
+        <div class="col-md-7 form-group">
             @foreach ($data as $key => $item)
                 <div class="accordion-body collapse @if($key==0){{"show"}}@endif" id="panel-body-{{$key}}" data-parent="#accordion" style="">
 
-                    <h5 class="color-main">{{$item['title']}}</h5>
+                    <h6 class="color-main">{{$item['title']}}</h6>
                     <hr class="mt-2 mb-2" style="border-top: 1px solid #0A4B31">
                     
                     <div class="d-flex mb-2">
@@ -112,4 +126,32 @@
 @endsection
 
 @section('more-script')
+    <script>
+    $(function() {
+       
+        var accordion = new Vue({
+                el: '#accordion',
+                data: {
+                    selected : 0
+                },
+                methods : {
+                    click : function(id){
+                        console.log('click',id)
+                        $('.accordion-body').removeClass('show')
+                        $('#panel-body-'+id).addClass('show')
+
+                    },
+                    change : function(e){
+                        console.log('change',e.target.value)
+                        $('.accordion-body').removeClass('show')
+                        $('#panel-body-'+e.target.value).addClass('show')
+
+                    }
+                },
+                created : function () {
+                    console.log('start vue')
+                }
+        });
+    });
+    </script>
 @endsection

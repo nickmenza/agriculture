@@ -130,7 +130,6 @@
     {{-- <script src="/js/fancybox/source/jquery.fancybox.js" type="text/javascript"></script> --}}
     {{ Html::script('stisla-master/assets/js/stisla.js') }}
     <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
-    <script id="salesdesk-widget-script" src="https://api-salesdesk.readyplanet.com/js/salesdesk-widget-v2.min.js?business_id=6aff2496603639d45b9f965aea273b2a" type="text/javascript" charset="UTF-8"></script>
 
     <!-- JS Libraies -->
 

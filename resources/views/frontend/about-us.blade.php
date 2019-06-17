@@ -31,12 +31,6 @@
         max-width: 750px;
     }
 
-    p {
-    color: #fff;
-    padding: 0 12px;
-    width: 280px;
-    }
-    
 
    
 </style>
@@ -153,7 +147,7 @@
 </div> --}}
 {{-- <div class="pallex1" style="background-image: url('/images/bg-timeline.png');position: relative;z-index:-2">
     <div class="w-100 h-100 pt-4 pb-4" style="position: absolute;background: rgba(255, 255, 255, 0.4);"> --}}
-        <div class="container text-center">
+        {{-- <div class="container text-center">
             <div class="project-timeline">
                 <div class="step">
                     <div class="number">
@@ -217,9 +211,79 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     {{-- </div>
 </div> --}}
+
+<div class="pallex1" style="background-image: url('/images/bg-timeline.png');position: relative;z-index:-2">
+    <div class="w-100 h-100 pt-4 pb-4 d-flex align-items-center" style="position: absolute;background: rgba(255, 255, 255, 0.4);">
+        <div class="container">
+            <div class="steps-timeline">
+                <div class="step">
+                    <div class="step-milestone"/></div>
+                    <span class="step-title">
+                        2548 <br>
+                    </span>
+                    <p class="step-description">
+                            <label class="color-main">ก่อตั้งบริษัทอาร์แอนด์ดี เกษตรพัฒนา จำกัด</label><br>
+                            - สำนักงานใหญ่ กรุงเทพฯ<br>
+                            - ศูนย์สวี บนพื้นที่ 37 ไร่<br>
+                            - ศูนย์ละแม บนพื้นที่ 200 ไร่<br>
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-milestone"/></div>
+                    <span class="step-title">
+                        2552 <br>
+                    </span>
+                    <p class="step-description">
+                        <div class="detail">
+                        ศูนย์ปะทิว จุดพักกล้า บนพื้นที่ 100 ไร่
+                        </div>
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-milestone"/></div>
+                    <span class="step-title">
+                        2556 <br>
+                    </span>
+                    <p class="step-description">
+                        <div class="detail">
+                        ศูนย์ปราจีนบุรี บนพื้นที่ 3000 ไร่
+                        </div>
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-milestone"/></div>
+                    <span class="step-title">
+                        2558 <br>
+                    </span>
+                    <p class="step-description">
+                            <label class="color-main">เข้าซื้อกิจการบริษัท พาราเม้าท์ ออยล์ จำกัด และ
+                            เปลี่ยนชื่อทั้ง 3 แห่งเป็น บริษัท อาร์ดี เกษตรพัฒนา จำกัด</label><br>
+                            -	ศูนย์พัทลุง บนพื้นที่ 200 ไร่<br>
+                            -	ศูนย์รัตภูมิ บนพื้นที่ 9 ไร่<br>
+                            -	ศูนย์บ่อล้อ บนพื้นที่ 19 ไร่<br>
+                            -	เปิดแปลงทดสอบสายพันธุ์ ศูนย์นครนายก บนพื้นที่ 1600 ไร่<br>
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-milestone"/></div>
+                    <span class="step-title">
+                        2559 <br>
+                    </span>
+                    <p class="step-description">
+                        <div class="detail">
+                        ศูนย์ปะทิว จุดพักกล้า บนพื้นที่ 100 ไร่
+                        </div>
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
 
 @endsection
 

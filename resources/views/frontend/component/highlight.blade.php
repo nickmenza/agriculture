@@ -20,7 +20,7 @@ if($data){
 //     }
 // }
 ?>
-<div class="highlight" style="background-image: url('{{$path}}');">
+<div class="highlight main" style="background-image: url('{{$path}}');">
     <div class="text-center" style="color:white">
         <h3 class="mb-1">
             @if(isset($text_th))

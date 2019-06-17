@@ -41,17 +41,31 @@
 
 <div class="container pt-5 pb-5">
     <div class="row" id="accordion">
-        <div class="col-5">
-            <h5 class="color-main">ตำแหน่งที่เปิดรับ</h5>
-            <hr class="mt-1 mb-1">
-            @foreach ($data as $key => $item)
-                <div class="accordion-header" role="button" data-toggle="collapse" data-target="#panel-body-{{$key}}" aria-expanded="@if($key==0){{"true"}}@else{{"false"}}@endif">
-                    {{$item['career_name']}}
-                </div>
-            @endforeach
+        <div class="col-md-5">
+            <div class="d-none d-md-block">
+                <h5 class="color-main">ตำแหน่งที่เปิดรับ</h5>
+                <hr class="mt-1 mb-1">
+                @foreach ($data as $key => $item)
+                    <div class="accordion-header" role="button" v-on:click="click('{{$key}}')"
+                    {{-- data-toggle="collapse" data-target="#panel-body-{{$key}}"  --}}
+                    aria-expanded="@if($key==0){{"true"}}@else{{"false"}}@endif">
+                        {{$item['career_name']}}
+                    </div>
+                @endforeach
+            </div>
+            <div class="d-block d-md-none">
+                <h5 class="m-0 p-2 color-main">ตำแหน่งที่เปิดรับ</h5>
+                <select class="form-control" id="mobile-select" :v-model="selected" v-on:change="change">
+                    @foreach ($data as $key => $item)
+                    <option value="{{$key}}">
+                        {{$item['career_name']}}
+                    </option>
+                    @endforeach
+                </select>
+            </div>
             
         </div>
-        <div class="col-7">
+        <div class="col-md-7">
             @foreach ($data as $key => $item)
                 <div class="accordion-body collapse @if($key==0){{"show"}}@endif" id="panel-body-{{$key}}" data-parent="#accordion" style="">
                     <h5 class="color-main">คำอธิบายตำแหน่ง</h5>
@@ -90,4 +104,32 @@
 @endsection
 
 @section('more-script')
+    <script>
+    $(function() {
+       
+        var accordion = new Vue({
+                el: '#accordion',
+                data: {
+                    selected : 0
+                },
+                methods : {
+                    click : function(id){
+                        console.log('click',id)
+                        $('.accordion-body').removeClass('show')
+                        $('#panel-body-'+id).addClass('show')
+
+                    },
+                    change : function(e){
+                        console.log('change',e.target.value)
+                        $('.accordion-body').removeClass('show')
+                        $('#panel-body-'+e.target.value).addClass('show')
+
+                    }
+                },
+                created : function () {
+                    console.log('start vue')
+                }
+        });
+    });
+    </script>
 @endsection

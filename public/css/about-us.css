@@ -140,7 +140,7 @@ body h1 {
 }
 
 .pallex1 {
-  min-height: 720px;
+  min-height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -151,15 +151,9 @@ body h1 {
   flex-direction: column;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 768.98px) {
   .pallex1 {
-    min-height: 800px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .pallex1 {
-    min-height: 1000px;
+    min-height: 700px;
   }
 }
 
@@ -296,6 +290,123 @@ body h1 {
             transform: rotate(90deg) translateY(3rem) translateX(4rem);
     text-align: left;
     width: 8rem;
+  }
+}
+
+.steps-timeline {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.steps-timeline:before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0px;
+  background: #0A4B31;
+  border: solid 7px #0A4B31;
+  margin-top: -8px;
+  border-radius: 100%;
+}
+
+@media (max-width: 768.98px) {
+  .steps-timeline:before {
+    margin: 0;
+    margin-left: -8px;
+  }
+}
+
+.steps-timeline::after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0px;
+  background: #0A4B31;
+  border: solid 7px #0A4B31;
+  margin-top: -8px;
+  border-radius: 100%;
+}
+
+@media (max-width: 768.98px) {
+  .steps-timeline::after {
+    margin: 0;
+    margin-left: -8px;
+  }
+}
+
+.step-title,
+.step-description {
+  margin: 0;
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.step-title {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ste-description {
+  overflow: hidden;
+  line-height: 20px;
+}
+
+.steps-timeline .step {
+  outline: 1px dashed rgba(0, 128, 0, 0);
+  margin-bottom: 20px;
+}
+
+.step-milestone {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: 4px solid #0A4B31;
+  border-radius: 50%;
+  margin: 15px auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .steps-timeline {
+    border-left: 2px solid #0A4B31;
+    margin-left: 25px;
+  }
+
+  .steps-timeline .step {
+    margin-left: -25px;
+    display: block;
+    overflow: auto;
+  }
+
+  .step-milestone {
+    float: left;
+    margin-left: 10px;
+  }
+
+  .step-title,
+  .step-description {
+    text-align: left;
+    margin-left: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .steps-timeline {
+    border-top: 2px solid #0A4B31;
+    display: -moz-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .steps-timeline .step {
+    margin-top: -30px;
+    /* Safari 6.1+ */
+    /* IE 10 */
+    flex: 1;
   }
 }
 
