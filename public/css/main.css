@@ -196,7 +196,7 @@ a:hover {
 
 @media (max-width: 575.98px) {
   .highlight.main {
-    min-height: 150px !important;
+    min-height: 200px !important;
   }
 }
 
