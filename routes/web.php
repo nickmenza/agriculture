@@ -30,6 +30,9 @@ Route::post('/contact', 'Frontend\ContactController@post');
 
 Route::get('/career', 'Frontend\CareerController@index');
 
+Route::get('/show-modal', function(){
+    return 'test';
+});
 
 
 // admin

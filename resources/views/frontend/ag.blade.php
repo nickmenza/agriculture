@@ -22,6 +22,11 @@
         justify-content: center;
         flex-direction: column;
     }
+    .modal-body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 </style>
 @endsection
 
@@ -35,13 +40,21 @@
 <div class="container pt-5 pb-5">
     <div class="row article1">
             @foreach ($ag as $item)
-            <div class="col-sm-6 col-md-4 mb-3">
+            <?php
+            $path_img = 'https://via.placeholder.com/300x300';
+            if(Storage::disk('uploads')->exists($item->images)){
+                $path_img = Storage::disk('uploads')->url(str_replace('article/', 'article/', $item->images));
+            }
+
+            ?>
+            <div class="col-sm-6 col-md-4 mb-3 bbox" data-img = {{$path_img}}>
                 <div class="ag">
-                    @if(Storage::disk('uploads')->exists($item->images))
+                    {{-- @if(Storage::disk('uploads')->exists($item->images))
                         <img src="{{Storage::disk('uploads')->url(str_replace('article/', 'article/', $item->images))}}" class="mb-1 w-100 shadow">
                     @else
                         <img src="https://via.placeholder.com/300x300" class="mb-1 w-100 shadow">
-                    @endif
+                    @endif --}}
+                    <img src="{{$path_img}}" class="mb-1 w-100 shadow">
                     <div class="detail">
                         {{$item->article_name}}
                         <br>
@@ -71,4 +84,15 @@
 @endsection
 
 @section('more-script')
+<script>
+    $( document ).ready(function() {
+        $('.bbox').click(function(){
+            console.log($(this).data().img)
+            $("body").fireModal({
+                title: '',
+                body: '<img src="'+$(this).data().img+'">'
+            });
+        })
+    });
+</script>
 @endsection
