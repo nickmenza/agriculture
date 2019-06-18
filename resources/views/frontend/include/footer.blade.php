@@ -13,7 +13,7 @@
             'link' => url('/agriculturist'),
         ],
         [
-            'text' => 'คู่มือการจัดการสวน',
+            'text' => 'คู่มือการจัดสวน',
             'link' => url('/garden'),
         ],
         [
