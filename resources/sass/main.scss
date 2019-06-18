@@ -131,6 +131,12 @@ a{
     a{
         padding: 10px;
         color: white;
+        &.link{
+            @media (max-width: 767.98px) { 
+                display: none;
+            }
+        }
+        
     }
     .logo{
         width: 50px;

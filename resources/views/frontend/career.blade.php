@@ -45,7 +45,7 @@
 
 <div class="container pt-5 pb-5">
     <div class="row" id="accordion">
-        <div class="col-md-5">
+        <div class="col-md-5 form-group">
             <div class="d-none d-md-block">
                 <h5 class="color-main">ตำแหน่งที่เปิดรับ</h5>
                 <hr class="mt-1 mb-1">
@@ -70,7 +70,7 @@
             </div>
             
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7 form-group">
             @foreach ($data as $key => $item)
                 <div class="accordion-body collapse @if($key==0){{"show"}}@endif" id="panel-body-{{$key}}" data-parent="#accordion" style="">
                     <h5 class="color-main mb-3">

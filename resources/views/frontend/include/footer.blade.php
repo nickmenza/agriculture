@@ -46,9 +46,9 @@
             <img src="/images/logo.png" class="logo">
         </a>
         @foreach ($footer as $item)
-        <a href="{{$item['link']}}">
-            {{$item['text']}}
-        </a>
+            <a class="link" href="{{$item['link']}}">
+                {{$item['text']}}
+            </a>
         @endforeach
     </div>
     <div class="mt-3">
