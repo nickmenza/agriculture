@@ -25,6 +25,10 @@
     iframe { 
         max-width: 100%;
     }
+    .accordion-header.active{
+        color: white;
+        background-color: #0A4B31;
+    }
 </style>
 @endsection
 
@@ -42,8 +46,9 @@
                 <h5 class="m-0 p-2" style="color:white;background-color:#0A4B31">ติดต่อสำนักงานขาย</h5>
                 <hr class="mt-1 mb-1">
                 @foreach ($data as $key => $item)
-                    <div class="accordion-header p-2 b-hover" role="button" v-on:click="click('{{$key}}')"
+                    <div class="accordion-header p-2 b-hover @if($key==0){{'active'}}@endif" role="button" v-on:click="click('{{$key}}')"
                     {{-- data-toggle="collapse" data-target="#panel-body-{{$key}}" --}}
+                    id="accordion-header-{{$key}}"
                     aria-expanded="@if($key==0){{"true"}}@else{{"false"}}@endif">
                         {{$item['title']}}
                     </div>
@@ -65,7 +70,7 @@
             @foreach ($data as $key => $item)
                 <div class="accordion-body collapse @if($key==0){{"show"}}@endif" id="panel-body-{{$key}}" data-parent="#accordion" style="">
 
-                    <h6 class="color-main">{{$item['title']}}</h6>
+                    <div class="color-main">{{$item['title']}}</div>
                     <hr class="mt-2 mb-2" style="border-top: 1px solid #0A4B31">
                     
                     <div class="d-flex mb-2">
@@ -139,12 +144,14 @@
                         console.log('click',id)
                         $('.accordion-body').removeClass('show')
                         $('#panel-body-'+id).addClass('show')
-
+                        $('.accordion-header').removeClass('active')
+                        $('#accordion-header-'+id).addClass('active')
                     },
                     change : function(e){
                         console.log('change',e.target.value)
                         $('.accordion-body').removeClass('show')
                         $('#panel-body-'+e.target.value).addClass('show')
+                        
 
                     }
                 },

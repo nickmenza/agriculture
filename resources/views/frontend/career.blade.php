@@ -29,6 +29,10 @@
         background-color: #0A4B31;
         color: white;
     }
+    .accordion-header.active{
+        color: white;
+        background-color: #0A4B31;
+    }
 </style>
 @endsection
 
@@ -46,8 +50,9 @@
                 <h5 class="color-main">ตำแหน่งที่เปิดรับ</h5>
                 <hr class="mt-1 mb-1">
                 @foreach ($data as $key => $item)
-                    <div class="accordion-header" role="button" v-on:click="click('{{$key}}')"
+                    <div class="accordion-header @if($key==0){{'active'}}@endif" role="button" v-on:click="click('{{$key}}')"
                     {{-- data-toggle="collapse" data-target="#panel-body-{{$key}}"  --}}
+                    id="accordion-header-{{$key}}"
                     aria-expanded="@if($key==0){{"true"}}@else{{"false"}}@endif">
                         {{$item['career_name']}}
                     </div>
@@ -68,6 +73,9 @@
         <div class="col-md-7">
             @foreach ($data as $key => $item)
                 <div class="accordion-body collapse @if($key==0){{"show"}}@endif" id="panel-body-{{$key}}" data-parent="#accordion" style="">
+                    <h5 class="color-main mb-3">
+                        {{$item['career_name']}}
+                    </h5>
                     <h5 class="color-main">คำอธิบายตำแหน่ง</h5>
                     <div class="pl-3">{{$item->detail}}</div>
                     <h5 class="color-main">สถานที่</h5>
@@ -117,6 +125,8 @@
                         console.log('click',id)
                         $('.accordion-body').removeClass('show')
                         $('#panel-body-'+id).addClass('show')
+                        $('.accordion-header').removeClass('active')
+                        $('#accordion-header-'+id).addClass('active')
 
                     },
                     change : function(e){

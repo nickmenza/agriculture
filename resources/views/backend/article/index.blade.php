@@ -2,6 +2,11 @@
 
 @section('more-style')
     <style>
+        .over{
+            overflow: hidden;
+            max-height: 500px;
+            overflow-y: auto;
+        }
     </style>
 @endsection
 
@@ -44,7 +49,11 @@
                             @endif
                         </th>
                         <td>{{$item->article_name}}</td>
-                        <td>{!!$item->detail!!}</td>
+                        <td>
+                            <div class="over">
+                            {!!$item->detail!!}
+                            </div>
+                        </td>
                         <td class="text-center">
                             <div class="d-flex justify-content-center">
                                 <a href="{{route($route_name.'.edit',$item->id)}}" class="btn btn-icon icon-left btn-primary mr-1"><i class="far fa-edit"></i></a>

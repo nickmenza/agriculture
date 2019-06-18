@@ -13,6 +13,10 @@
             'link' => url('/agriculturist'),
         ],
         [
+            'text' => 'คู่มือการจัดการสวน',
+            'link' => url('/garden'),
+        ],
+        [
             'text' => 'ศูนย์กล้าปาล์มน้ำมัน',
             'link' => url('/location'),
         ],

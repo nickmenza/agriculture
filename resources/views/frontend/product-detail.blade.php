@@ -36,7 +36,14 @@
 @endcomponent
 
 <div style="background-color: #F7F7F7;">
-<div class="container pt-5 pb-5" style="backgroud">
+<div class="container pt-5 pb-5" style="">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb p-0">
+            <li class="breadcrumb-item"><a href="{{url('product')}}" style="color: #6777ef;">ผลิตภัณฑ์</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{$data->product_name}}</li>
+        </ol>
+    </nav>
+
     <div class="row">
         <div class="col-md-4">
             <div style="background-color:white;color:black" class=" p-2">
