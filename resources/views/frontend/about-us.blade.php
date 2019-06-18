@@ -31,6 +31,11 @@
         max-width: 750px;
     }
 
+    @media (max-width: 767.98px) { 
+        .bg-img{
+            background-image : none !important
+        }
+    }
 
    
 </style>
