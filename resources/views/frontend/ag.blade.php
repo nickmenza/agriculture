@@ -27,6 +27,18 @@
         align-items: center;
         justify-content: center;
     }
+    .img-ab{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 100px;
+        background-color: rgba(0,0,0,.2);
+    }
 </style>
 @endsection
 
@@ -80,6 +92,9 @@
     </div>
 </div>
 
+<div class="img-ab" style="display:none">
+    <img id="img-modal" src="https://via.placeholder.com/300x300">
+</div>
 
 @endsection
 
@@ -87,11 +102,12 @@
 <script>
     $( document ).ready(function() {
         $('.bbox').click(function(){
-            console.log($(this).data().img)
-            $("body").fireModal({
-                title: '',
-                body: '<img src="'+$(this).data().img+'">'
-            });
+            // console.log($(this).data().img)
+            $('#img-modal').attr('src',$(this).data().img)
+            $('.img-ab').toggle();
+        })
+        $('.img-ab').click(function(){
+            $('.img-ab').toggle();
         })
     });
 </script>
