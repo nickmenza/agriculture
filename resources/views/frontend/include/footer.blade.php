@@ -51,6 +51,8 @@
             </a>
         @endforeach
     </div>
+    <div class="line1">
+    </div>
     <div class="mt-3">
         Copyright @ 2019. All right reserved.
     </div>

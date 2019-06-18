@@ -121,7 +121,7 @@ a{
     flex-direction: column;
     background-color: $color;
     .line{
-        border-bottom: 1px solid white;
+        // border-bottom: 1px solid white;
         flex-wrap: wrap;
         display: flex;
         align-items: center;
@@ -140,6 +140,10 @@ a{
     }
     .logo{
         width: 50px;
+    }
+    .line1{
+        border-bottom: 1px solid white;
+        width: 100%;
     }
    
 }
