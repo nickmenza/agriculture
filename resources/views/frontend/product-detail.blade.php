@@ -39,7 +39,7 @@
 <div class="container pt-5 pb-5" style="">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb p-0">
-            <li class="breadcrumb-item"><a href="{{url('product')}}" style="color: #6777ef;">ผลิตภัณฑ์</a></li>
+            <li class="breadcrumb-item"><a href="{{url('product')}}" style="color: #0A4B31;">ผลิตภัณฑ์</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{$data->product_name}}</li>
         </ol>
     </nav>

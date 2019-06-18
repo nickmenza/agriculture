@@ -35,7 +35,7 @@
 <div class="container pt-5 pb-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb p-0">
-            <li class="breadcrumb-item"><a href="{{url('news')}}" style="color: #6777ef;">ข่าวสารและกิจกรรม</a></li>
+            <li class="breadcrumb-item"><a href="{{url('news')}}" style="color: #0A4B31;">ข่าวสารและกิจกรรม</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{$data->article_name}}</li>
         </ol>
     </nav>
