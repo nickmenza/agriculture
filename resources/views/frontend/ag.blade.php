@@ -93,7 +93,7 @@
 </div>
 
 <div class="img-ab" style="display:none">
-    <img id="img-modal" src="https://via.placeholder.com/300x300">
+    <img id="img-modal" src="https://via.placeholder.com/300x300" style="max-width:400px">
 </div>
 
 @endsection
