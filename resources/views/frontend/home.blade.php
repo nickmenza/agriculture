@@ -252,9 +252,9 @@
             autoplay:true,
             responsive:{
                 768:{
-                    items:1
+                    items:3
                 },
-                500:{
+                200:{
                     items:1
                 }
             }
@@ -267,9 +267,9 @@
             autoplay:true,
             responsive:{
                 768:{
-                    items:1
+                    items:3
                 },
-                500:{
+                200:{
                     items:1
                 }
             }
