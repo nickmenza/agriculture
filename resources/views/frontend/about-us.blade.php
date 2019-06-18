@@ -36,6 +36,11 @@
             background-image : none !important
         }
     }
+    @media (max-width: 575.98px){
+        .highlight.main {
+            min-height: 150px !important;
+        }
+    }
 
    
 </style>
@@ -49,7 +54,7 @@
 
 <div class="bg-img" style="background-image: url('/images/bg1.png')">
     
-    <div class="container pt-5 pb-5">
+    <div class="container pt-3 pb-5">
         <div class="row mb-5">
             <div class="col-md-9">
                     <h5 class="font-bold">เริ่มต้นก้าวแรกในธุรกิจปาล์มน้ำมัน</h5>
