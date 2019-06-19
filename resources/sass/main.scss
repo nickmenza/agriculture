@@ -399,7 +399,7 @@ $red:#FF5757;
         background-color:$color;
         transition-delay:0.4s;
         transform: translate3d(0px, 0px, 0px) rotateZ(45deg);
-        width:36px;
+        width:41px;
         transform-origin:left top;
       }
       &:nth-of-type(2) {
@@ -409,7 +409,7 @@ $red:#FF5757;
         background-color:$color;
         transition-delay:0.4s;
         transform: translate3d(0px, 0px, 0px) rotateZ(-45deg);
-        width:36px;
+        width:41px;
         transform-origin:left bottom;
       }
     }

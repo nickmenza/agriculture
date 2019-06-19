@@ -425,7 +425,7 @@ a:hover {
   transition-delay: 0.4s;
   -webkit-transform: translate3d(0px, 0px, 0px) rotateZ(45deg);
           transform: translate3d(0px, 0px, 0px) rotateZ(45deg);
-  width: 36px;
+  width: 41px;
   -webkit-transform-origin: left top;
           transform-origin: left top;
 }
@@ -439,7 +439,7 @@ a:hover {
   transition-delay: 0.4s;
   -webkit-transform: translate3d(0px, 0px, 0px) rotateZ(-45deg);
           transform: translate3d(0px, 0px, 0px) rotateZ(-45deg);
-  width: 36px;
+  width: 41px;
   -webkit-transform-origin: left bottom;
           transform-origin: left bottom;
 }
