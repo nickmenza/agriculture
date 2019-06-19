@@ -45,7 +45,7 @@
                 <h5 class="color-main">
                     {{Carbon\Carbon::parse($item->date)->format('F d, Y')}}
                 </h5>
-                <h5>
+                <h5 class="ellipsis">
                     {{$item->article_name}}
                 </h5>
                 <label class="article-overflow">

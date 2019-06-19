@@ -321,10 +321,6 @@ a:hover {
   width: 100%;
 }
 
-.article1 img {
-  max-height: 300px;
-}
-
 *,
 *::before,
 *::after {
@@ -447,5 +443,12 @@ a:hover {
   width: 41px;
   -webkit-transform-origin: left bottom;
           transform-origin: left bottom;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
 }
 
