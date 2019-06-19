@@ -37,10 +37,11 @@
         @foreach ($news as $item)
         <a href="{{url('news/'.$item->id.'/'.$item->article_name)}}" class="col-sm-6 col-md-4 mb-3">
             @if(Storage::disk('uploads')->exists($item->images))
-                <img src="{{Storage::disk('uploads')->url(str_replace('article/', 'article/300/', $item->images))}}" class="mb-1 w-100">
+                {{-- <img src="{{Storage::disk('uploads')->url(str_replace('article/', 'article/300/', $item->images))}}" class="mb-1 w-100"> --}}
+                <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100">
                 {{-- {{str_replace('article/', 'article/300/', $item->images)}} --}}
             @else
-                <img src="https://via.placeholder.com/300x300" class="mb-1 w-100">
+                <img src="https://via.placeholder.com/300x230" class="mb-1 w-100">
             @endif
             <h5 class="color-main">
                 {{Carbon\Carbon::parse($item->date)->format('F d, Y')}}

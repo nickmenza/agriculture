@@ -140,11 +140,13 @@
                 [
                     'header' => 'เกี่ยวกับเรา',
                     'header1' => 'ABOUT US',
+                    'img' => url('images/news-bottom.png'),
                     'detail' => 'บริษัท อาร์ดี เกษตรพัฒนา จำกัด ก่อตั้งเมื่อ เดือนเมษายน 2548 โดยมีสองบริษัทในเครือ คือ บริษัท อาร์แอนด์ดี เกษตรพัฒนา จำกัด และบริษัท พาราเมาท์ ออยล์ จำกัด ประกอบกิจการด้านการเกษตร ด้วยการเพาะปลูกและจำหน่ายต้นกล้าปาล์มน้ำมัน และทำสวนปาล์มน้ำมัน ตั้งแต่ปี 2548 จนถึงปัจจุบัน บริษัทฯมีลูกค้าทั่วประเทศ มากกว่า 70 จังหวัด'
                 ],
                 [
                     'header' => 'ศูนย์กล้าปาล์มน้ำมัน',
                     'header1' => 'OIL PALM PLANTATION CENTER',
+                    'img' => url('images/home-down.jpg'),
                     'detail' => 'ต้นกล้าที่เจริญเติบโตสมบูรณ์ จัดวางในแปลงเพาะอย่างเหมาะสม และได้รับการบำรุงรักษาอย่างดี จะให้ผลผลิตได้อย่างรวดเร็วเมื่อนำไปปลูกในแปลง บริษัทฯ ได้ทำความตกลงและร่วมมือกับแปลงเพาะในเครือข่ายเพื่อรับประกันว่า เกษตรจะได้รับต้นกล้าปาล์มที่มีคุณภาพเท่านั้น'
                 ],
             ];
@@ -169,7 +171,7 @@
                 </div>
                 @endif
                 <div>
-                    <img class="w-100" src="/images/news-bottom.png">
+                    <img class="w-100" src="{{$item['img']}}">
                 </div>
                 @if($i%2 == 0)
                 <div class="line">
@@ -221,9 +223,9 @@
         <a href="{{url('garden/'.$item->id.'/'.Helper::make_slug($item->article_name))}}" class="col-sm-12 col-md-4 mb-3">
             @if(Storage::disk('uploads')->exists($item->images))
                 {{-- <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100"> --}}
-                <img src="{{Storage::disk('uploads')->url(str_replace('article/', 'article/300/', $item->images))}}" class="mb-1 w-100">
+                <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100">
             @else
-                <img src="https://via.placeholder.com/300x300" class="mb-1 w-100">
+                <img src="https://via.placeholder.com/300x230" class="mb-1 w-100">
             @endif
             <h5 class="color-main" style="font-size:14px">
                 {{Carbon\Carbon::parse($item->date)->format('F d, Y')}}
