@@ -129,7 +129,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
     {{-- <script src="/js/fancybox/source/jquery.fancybox.js" type="text/javascript"></script> --}}
     {{ Html::script('stisla-master/assets/js/stisla.js') }}
-    <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/4.11.4/full/ckeditor.js"></script>
 
     <!-- JS Libraies -->
 
@@ -139,8 +139,13 @@
     {{ Html::script('stisla-master/assets/js/scripts.js') }}
     {{ Html::script('stisla-master/assets/js/custom.js') }}
     <script>
+
         $(".summernote-simple").each(function () {
             CKEDITOR.replace( $(this).attr("name") );
+            // CKEDITOR.replace( $(this).attr("name"), {
+            //     toolbarGroups: toolbarGroups
+
+            // });
         });
         $('input[type="file"]').on("change", function(){ 
             readURL(this)
