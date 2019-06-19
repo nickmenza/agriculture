@@ -200,13 +200,13 @@ a:hover {
   .highlight.main {
     background-size: 100% auto;
     background-position: center top;
-    min-height: 300px !important;
+    min-height: 250px !important;
   }
 }
 
 @media (max-width: 575.98px) {
   .highlight.main {
-    min-height: 200px !important;
+    min-height: 150px !important;
   }
 }
 

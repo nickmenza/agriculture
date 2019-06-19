@@ -36,11 +36,7 @@
             background-image : none !important
         }
     }
-    @media (max-width: 575.98px){
-        .highlight.main {
-            min-height: 150px !important;
-        }
-    }
+    
 
    
 </style>

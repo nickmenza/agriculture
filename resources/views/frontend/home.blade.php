@@ -3,6 +3,13 @@
 @section('more-style')
     {{ Html::style('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css') }}
     {{ Html::style('css/home.css') }}
+    <style>
+        @media (max-width: 575.98px){
+            .highlight.main {
+                min-height: 200px !important;
+            }
+        }
+    </style>
 @endsection
 
 @section('body')
@@ -211,7 +218,7 @@
     <div class="row article1">
         @foreach ($garden as $item)
         
-        <a href="{{url('garden/'.$item->id.'/'.Helper::make_slug($item->article_name))}}" class="col-sm-6 col-md-4 mb-3">
+        <a href="{{url('garden/'.$item->id.'/'.Helper::make_slug($item->article_name))}}" class="col-sm-12 col-md-4 mb-3">
             @if(Storage::disk('uploads')->exists($item->images))
                 {{-- <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100"> --}}
                 <img src="{{Storage::disk('uploads')->url(str_replace('article/', 'article/300/', $item->images))}}" class="mb-1 w-100">
