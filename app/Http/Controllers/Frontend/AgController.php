@@ -15,7 +15,7 @@ class AgController extends Controller
     }
 
     public function index(){
-        $ag = Article::select()->where('type',3)->orderBy('id','desc')->get();
+        $ag = Article::select()->where('type',3)->orderBy('date','desc')->get();
         return view('frontend.ag',compact('ag'));
     }
     

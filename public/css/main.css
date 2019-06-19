@@ -49,6 +49,11 @@ p {
   font-size: 18px;
 }
 
+b,
+strong {
+  font-weight: bold;
+}
+
 .font-bold {
   font-weight: bold;
 }
