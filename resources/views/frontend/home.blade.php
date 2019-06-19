@@ -133,7 +133,7 @@
         @endforeach
     </div>
 </div>
-<div style="background-image: url('/images/h-back.png');margin-top:-150px;padding-top: 180px;padding-bottom:30px;z-index: -2;position: relative;">
+<div style="background-image: url('/images/h-back.png');margin-top:-150px;padding-top: 170px;padding-bottom:30px;z-index: -2;position: relative;">
     <div class="container"> 
         <?php
             $list = [
