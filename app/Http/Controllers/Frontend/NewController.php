@@ -16,12 +16,12 @@ class NewController extends Controller
     }
 
     public function index(){
-        $news = Article::select()->where('type',1)->orderBy('id','desc')->get();
+        $news = Article::select()->where('type',1)->orderBy('date','desc')->get();
         return view('frontend.news',compact('news'));
     }
 
     public function detail($id,$name){
-        $new = Article::select()->where('type',2)->limit(3)->orderBy('id','desc')->get();
+        $new = Article::select()->where('type',2)->limit(3)->orderBy('date','desc')->get();
         $data = Article::find($id);
         if(!$data){
             return redirect()->back();

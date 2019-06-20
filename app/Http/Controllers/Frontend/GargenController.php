@@ -15,12 +15,12 @@ class GargenController extends Controller
     }
 
     public function index(){
-        $garden = Article::select()->where('type',2)->orderBy('id','desc')->get();
+        $garden = Article::select()->where('type',2)->orderBy('date','desc')->get();
         return view('frontend.gardening',compact('garden'));
     }
 
     public function detail($id,$name){
-        $garden = Article::select()->where('type',2)->limit(3)->orderBy('id','desc')->get();
+        $garden = Article::select()->where('type',2)->limit(3)->orderBy('date','desc')->get();
         $data = Article::find($id);
         if(!$data){
             return redirect()->back();
