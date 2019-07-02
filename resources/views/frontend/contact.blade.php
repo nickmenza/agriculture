@@ -42,20 +42,20 @@
             [
                 'img' => 'images/contact1.png',
                 'head' => 'PHONE',
-                'text' => 'Phone. +662 0195000',
-                'link' => 'tel:+662 0195000'
+                'text' => 'Phone. 088 385 1851-2',
+                'link' => 'tel:088 385 1851-2'
             ],
             [
                 'img' => 'images/contact2.png',
                 'head' => 'ADDRESS',
-                'text' => '782/1 Onnut 17 Suanluang, Suanluang Bangkok 10250',
+                'text' => 'บริษัท อาร์ดี เกษตรพัฒนา จำกัด, 2170 อาคารกรุงเทพ ทาวเวอร์ ชั้นที่ 18 ถ.เพชรบุรีตัดใหม่ แขวงบางกะปิ เขตห้วยขวาง , กรุงเทพมหานคร 10310',
                 'link' => ""
             ],
             [
                 'img' => 'images/contact3.png',
                 'head' => 'E-MAIL',
-                'text' => 'info@.co.th',
-                'link' => 'mailto:info@zengroup.co.th'
+                'text' => 'marketing_hq1@rdkaset.com',
+                'link' => 'mailto:marketing_hq1@rdkaset.com'
             ],
         ];
         ?>

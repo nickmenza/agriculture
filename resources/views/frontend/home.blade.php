@@ -133,7 +133,7 @@
         @endforeach
     </div>
 </div>
-<div style="background-image: url('/images/h-back.png');margin-top:-150px;padding-top: 170px;padding-bottom:30px;z-index: -2;position: relative;">
+<div style="background-image: url('/images/h-back.png');margin-top:-150px;padding-top: 170px;padding-bottom:30px;z-index: -2">
     <div class="container"> 
         <?php
             $list = [
@@ -141,13 +141,15 @@
                     'header' => 'เกี่ยวกับเรา',
                     'header1' => 'ABOUT US',
                     'img' => url('images/news-bottom.png'),
-                    'detail' => 'บริษัท อาร์ดี เกษตรพัฒนา จำกัด ก่อตั้งเมื่อ เดือนเมษายน 2548 โดยมีสองบริษัทในเครือ คือ บริษัท อาร์แอนด์ดี เกษตรพัฒนา จำกัด และบริษัท พาราเมาท์ ออยล์ จำกัด ประกอบกิจการด้านการเกษตร ด้วยการเพาะปลูกและจำหน่ายต้นกล้าปาล์มน้ำมัน และทำสวนปาล์มน้ำมัน ตั้งแต่ปี 2548 จนถึงปัจจุบัน บริษัทฯมีลูกค้าทั่วประเทศ มากกว่า 70 จังหวัด'
+                    'detail' => 'บริษัท อาร์ดี เกษตรพัฒนา จำกัด ก่อตั้งเมื่อ เดือนเมษายน 2548 โดยมีสองบริษัทในเครือ คือ บริษัท อาร์แอนด์ดี เกษตรพัฒนา จำกัด และบริษัท พาราเมาท์ ออยล์ จำกัด ประกอบกิจการด้านการเกษตร ด้วยการเพาะปลูกและจำหน่ายต้นกล้าปาล์มน้ำมัน และทำสวนปาล์มน้ำมัน ตั้งแต่ปี 2548 จนถึงปัจจุบัน บริษัทฯมีลูกค้าทั่วประเทศ มากกว่า 70 จังหวัด',
+                    'link' => url('about-us'),
                 ],
                 [
                     'header' => 'ศูนย์กล้าปาล์มน้ำมัน',
                     'header1' => 'OIL PALM PLANTATION CENTER',
                     'img' => url('images/home-down.jpg'),
-                    'detail' => 'ต้นกล้าที่เจริญเติบโตสมบูรณ์ จัดวางในแปลงเพาะอย่างเหมาะสม และได้รับการบำรุงรักษาอย่างดี จะให้ผลผลิตได้อย่างรวดเร็วเมื่อนำไปปลูกในแปลง บริษัทฯ ได้ทำความตกลงและร่วมมือกับแปลงเพาะในเครือข่ายเพื่อรับประกันว่า เกษตรจะได้รับต้นกล้าปาล์มที่มีคุณภาพเท่านั้น'
+                    'detail' => 'ต้นกล้าที่เจริญเติบโตสมบูรณ์ จัดวางในแปลงเพาะอย่างเหมาะสม และได้รับการบำรุงรักษาอย่างดี จะให้ผลผลิตได้อย่างรวดเร็วเมื่อนำไปปลูกในแปลง บริษัทฯ ได้ทำความตกลงและร่วมมือกับแปลงเพาะในเครือข่ายเพื่อรับประกันว่า เกษตรจะได้รับต้นกล้าปาล์มที่มีคุณภาพเท่านั้น',
+                    'link' => url('location'),
                 ],
             ];
         ?>
@@ -162,6 +164,20 @@
                 </div>
                 <div style="font-size:15px">
                     {{$item['detail']}}
+                </div>
+                <div style="font-size:15px">
+                    @if($i%2 != 0)
+                    <a href="{{$item['link']}}">
+                    <i class="fas fa-chevron-left"></i>
+                        อ่านต่อ
+                    </a>
+                    @else
+                    <a href="{{$item['link']}}">
+                        อ่านต่อ
+                    <i class="fas fa-chevron-right"></i>
+                    </a>
+                    @endif
+                    
                 </div>
             </div>
 
@@ -195,10 +211,16 @@
                     @else
                         <img src="https://via.placeholder.com/300x300" class="mb-1 w-100">
                     @endif
+                    <br>
+                    <div class="item1 text-center">
+                        {!! $item->article_name !!}
+                        <br>
+                        {!! $item->detail !!}
+                    </div>
                 </div>
             @endforeach
         </div>
-        <div class="owl-carousel owl-theme" id="owl-text">
+        {{-- <div class="owl-carousel owl-theme" id="owl-text">
             @foreach ($list_home as $i => $item)
                 <div class="item text-center" id="text{{$i}}" data-position1="{{$i}}">
                     {!! $item->article_name !!}
@@ -206,7 +228,7 @@
                     {!! $item->detail !!}
                 </div>
             @endforeach
-        </div>
+        </div> --}}
     </div>
 </div>
 <div class="container pt-5 pb-5">
@@ -268,25 +290,8 @@
                 }
             }
         });
-        $('#owl-text').owlCarousel({
-            center: true,
-            items:2,
-            loop:true,
-            margin:10,
-            autoplay:true,
-            responsive:{
-                768:{
-                    items:3
-                },
-                200:{
-                    items:1
-                }
-            }
-        });
         $(document).on('click', '.owl-item>div', function() {
-           console.log( $(this).data())
             $('.owl-carousel').trigger('to.owl.carousel', $(this).data( 'position' ) );
-            $('#owl-text').trigger('to.owl.carousel', $(this).data( 'position1' ) );
 
         });
         
