@@ -204,7 +204,7 @@
     <div class="container">
         <div class="owl-carousel owl-theme" id="owl-images">
             @foreach ($list_home as $i => $item)
-                <div class="item"  data-position="{{$i}}">
+                <a href="@if($item['url']){{$item['url']}}@else{{""}}@endif" class="item"  data-position="{{$i}}">
                     @if(Storage::disk('uploads')->exists($item->images))
                         {{-- <img src="{{Storage::disk('uploads')->url($item->images)}}" class="mb-1 w-100"> --}}
                         <img src="{{Storage::disk('uploads')->url(str_replace('article/', 'article/300/', $item->images))}}" class="mb-1 w-100">
@@ -217,7 +217,7 @@
                         <br>
                         {!! $item->detail !!}
                     </div>
-                </div>
+                </a>
             @endforeach
         </div>
         {{-- <div class="owl-carousel owl-theme" id="owl-text">
