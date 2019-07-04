@@ -5,6 +5,7 @@
         .over{
             overflow: hidden;
             max-height: 500px;
+            max-width: 500px;
             overflow-y: auto;
         }
     </style>

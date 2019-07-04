@@ -139,7 +139,6 @@
     {{ Html::script('stisla-master/assets/js/scripts.js') }}
     {{ Html::script('stisla-master/assets/js/custom.js') }}
     <script>
-
         $(".summernote-simple").each(function () {
             CKEDITOR.replace( $(this).attr("name") );
             // CKEDITOR.replace( $(this).attr("name"), {
@@ -164,8 +163,6 @@
             }
         }
         
-       
-
        
     </script>
     @yield('more-script')

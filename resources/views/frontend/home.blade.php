@@ -167,12 +167,12 @@
                 </div>
                 <div style="font-size:15px">
                     @if($i%2 != 0)
-                    <a href="{{$item['link']}}">
+                    <a href="{{$item['link']}}" style="color:#0A4B31">
                     <i class="fas fa-chevron-left"></i>
                         อ่านต่อ
                     </a>
                     @else
-                    <a href="{{$item['link']}}">
+                    <a href="{{$item['link']}}" style="color:#0A4B31">
                         อ่านต่อ
                     <i class="fas fa-chevron-right"></i>
                     </a>

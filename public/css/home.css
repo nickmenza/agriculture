@@ -83,12 +83,6 @@
   flex-direction: column;
 }
 
-.readme {
-  border-bottom: 1px solid #0A4B31;
-  display: block;
-  color: black;
-}
-
 .b-hover:hover {
   background-size: 100%;
   background-color: white;

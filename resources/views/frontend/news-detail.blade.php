@@ -5,11 +5,6 @@
     img{
         max-width: 100%;
     }
-    .readme{
-        border-bottom: 1px solid #0A4B31;
-        display: block;
-        color: black;
-    }
     .pallex{
         color: white;
         min-height: 400px; 

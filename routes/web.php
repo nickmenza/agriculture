@@ -53,6 +53,7 @@ Route::prefix('_admin')->name('admin.')->group(function () {
         Route::resource('career', 'Backend\CareerController');
         Route::resource('contact', 'Backend\ContactController');
         Route::resource('seo', 'Backend\SeoController');
+        Route::resource('upload-images', 'Backend\UploadImagesController');
 
         Route::get('test', function () {
                 return view('backend.test');

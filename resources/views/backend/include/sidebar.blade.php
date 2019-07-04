@@ -46,6 +46,11 @@ $menu = [
         'icon' => 'fas fa-list',
         'link' => url($path.'/seo')
     ],
+    [
+        'text' => 'Upload Image',
+        'icon' => 'fas fa-list',
+        'link' => url($path.'/upload-images')
+    ],
 ];
 ?>
 
