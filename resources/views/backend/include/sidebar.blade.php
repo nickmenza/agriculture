@@ -47,7 +47,7 @@ $menu = [
         'link' => url($path.'/seo')
     ],
     [
-        'text' => 'Upload Image',
+        'text' => 'จัดการรูปภาพ',
         'icon' => 'fas fa-list',
         'link' => url($path.'/upload-images')
     ],
