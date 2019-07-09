@@ -19,5 +19,6 @@ class Location extends Model
         'email',
         'link',
         'iframe',
+        'images'
     ];
 }

@@ -29,6 +29,8 @@ Route::get('/contact', 'Frontend\ContactController@index');
 Route::post('/contact', 'Frontend\ContactController@post');
 
 Route::get('/career', 'Frontend\CareerController@index');
+Route::get('/search', 'Frontend\SearchController@index');
+
 
 Route::get('/show-modal', function(){
     return 'test';

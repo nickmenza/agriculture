@@ -13,16 +13,60 @@
 @endsection
 
 @section('body')
-<div class="" style="z-index:-2;position:relative">
-@component('frontend.component.highlight',
+
+
+<div class="" >
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            @foreach ($banner as $key => $item)
+                <?php
+                    $path = 'https://via.placeholder.com/1000x500';
+                    if(Storage::disk('uploads')->exists($item->images)){
+                        $path = Storage::disk('uploads')->url($item->images);
+                    }
+                    $text_th = $item->banner_name;
+                    $text_en = $item->banner_name_en;
+                ?>
+                <div class="carousel-item @if($key == 0){{"active"}}@endif">
+                    <img class="d-block w-100" src="{{$path}}">
+                    <div class="text-center" style="color:white;position: absolute;left: 0;right: 0;top: 40%;">
+                            <h3 class="mb-1">
+                                @if(isset($text_th))
+                                {{$text_th}}
+                                @endif
+                            </h3>
+                            <label class="">
+                                @if(isset($text_en))
+                                {{$text_en}}
+                                @endif
+                            </label>
+                        </div>
+                </div>
+            @endforeach
+           
+        </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+    </div>
+
+{{-- @component('frontend.component.highlight',
     [
         'text_th'=>'บริษัท อาร์ดี เกษตรพัฒนา จำกัด',
         'text_en'=>'จริงใจ คัดสรร พันธุ์ด',
         'path_img'=>'/images/h-home.png',
         'type' => 1
     ])
-@endcomponent
+@endcomponent --}}
 </div>
+
+
 <div class="container pt-5 pb-5">
     {{-- <div style="margin-top: -70px;"></div> --}}
     <div class="row con-b pt-3" style="margin-top: -70px;z-index:0" style="background-color:white">

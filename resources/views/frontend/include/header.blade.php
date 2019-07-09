@@ -67,7 +67,20 @@
         </nav>
     </div>
 </nav> --}}
-
+<div class="d-none d-md-block">
+<div class="search">
+    <form action="{{url('search')}}" method="GET">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">
+                        <i class="fas fa-search"></i>
+                </span>
+            </div>
+            <input type="text" class="form-control" name="search" value="{{Input::get('search')}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+    </form>
+</div>
+</div>
 <div id="button-nav" class="hamburger">
     <span class="burger"></span>
     <span class="burger"></span>
@@ -90,5 +103,17 @@
         <li><a href="#0">Contact</a></li> --}}
         </ul>
     </nav>
+    <form class="d-flex" action="{{url('search')}}" method="GET">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">
+                        <i class="fas fa-search"></i>
+                </span>
+            </div>
+            <input type="text" class="form-control" name="search" value="{{Input::get('search')}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+    </form>
     </div>
+    
+    
 </div>

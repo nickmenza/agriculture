@@ -318,6 +318,7 @@ $red:#FF5757;
     // align-items:center;
     justify-content:center;
     background-color: white;
+    flex-direction: column;
 }
 
 .content {
@@ -432,4 +433,11 @@ $red:#FF5757;
     border-bottom: 1px solid #0A4B31;
     display: block;
     // color: black;
+}
+
+.search{
+    position: absolute;
+    right: 70px;
+    top: 21px;
+    z-index: 9999;
 }

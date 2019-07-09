@@ -42,7 +42,6 @@
 <div class="container pt-5 pb-5">
     <div class="row" id="accordion">
         <div class="col-md-5 form-group">
-            <div class="d-none d-md-block">
                 <h5 class="m-0 p-2" style="color:white;background-color:#0A4B31">ติดต่อสำนักงานขาย</h5>
                 <hr class="mt-1 mb-1">
                 @foreach ($data as $key => $item)
@@ -53,8 +52,7 @@
                         {{$item['title']}}
                     </div>
                 @endforeach
-            </div>
-            <div class="d-block d-md-none">
+            {{-- <div class="d-block d-md-none">
                 <h5 class="m-0 p-2 color-main">ติดต่อสำนักงานขาย</h5>
                 <select class="form-control" id="mobile-select" :v-model="selected" v-on:change="change">
                     @foreach ($data as $key => $item)
@@ -63,7 +61,7 @@
                     </option>
                     @endforeach
                 </select>
-            </div>
+            </div> --}}
             
         </div>
         <div class="col-md-7 form-group">
@@ -100,7 +98,12 @@
                     <div class="form-group"></div>
                     <div class="mb-2">
                         <a target="_blank" href="{{$item['link']}}" class="btn btn-m">Google Map</a>
-                        {{-- <a href="#" class="btn btn-dark">แผนที่รูปภาพ</a> --}}
+                        @if(Storage::disk('uploads')->exists($item->images))
+                        <a href="{{Storage::disk('uploads')->url($item->images)}}" target="_blank" class="btn btn-m">แผนที่รูปภาพ</a>
+                        @else
+                        <a href="#" class="btn btn-m">แผนที่รูปภาพ</a>
+
+                        @endif
                     </div>
                     @if($item->iframe)
                         {!! $item->iframe !!}

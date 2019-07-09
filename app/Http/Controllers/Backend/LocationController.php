@@ -63,6 +63,10 @@ class LocationController extends Controller
     {
         $model = new $this->model;
         $data = $request->except('_token','id');
+        if ($request->hasFile('images')) {
+            $images = Storage::disk('uploads')->put('/product', $request->images);
+            $data['images'] = $images;
+        }
         $model->create($data);
         return redirect(route($this->route_name.'.index'));
     }

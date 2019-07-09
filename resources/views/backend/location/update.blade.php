@@ -55,6 +55,26 @@
                     <input type="text" class="form-control" name="iframe" value="{{$data->iframe}}">
                 </div>
             </div>
+
+            <div class="form-group row mb-4">
+                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">แผนที่รูปภาพ</label>
+                <div class="col-sm-12 col-md-7">
+                        <input type="file" class="form-control" name="images" data-show="blah" >
+                        @if(Storage::disk('uploads')->exists($data->images))
+                            <img id="blah" src="{{Storage::disk('uploads')->url($data->images)}}" style="width:150px">
+                        @else
+                            <img id="blah" style="width:150px">
+                        @endif
+                </div>
+                <div class="col-12 mt-2">
+                    <div class="row">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                        <div class="col-sm-12 col-md-7 text-danger">
+                            แนะนำขนาดรูป 800 x 600 px
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             
             <div class="form-group row mb-4">
