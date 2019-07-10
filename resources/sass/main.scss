@@ -325,7 +325,7 @@ $red:#FF5757;
     width: 300px;
     display:flex;
     // align-items:center;
-    justify-content:center;
+    // justify-content:center;
     background-color: white;
     flex-direction: column;
 }
@@ -446,11 +446,11 @@ $red:#FF5757;
 
 #search_{
     position: absolute;
-    right: 70px;
+    right: 90px;
     top: 21px;
     z-index: 9999;
     &.show{
-        right: 310px;
+        right: 330px;
     }
 }
 .search{
