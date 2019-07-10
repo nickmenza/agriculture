@@ -71,7 +71,7 @@
 <div class="search" id="search_">
     <form action="{{url('search')}}" method="GET" id="des_search">
             <i class="fas fa-search" data-id="#des_search"></i>
-            <input type="text" class="form-control" name="search" placeholder="ค้นหาบทความ, ผลิตภัณฑ์" value="{{Input::get('search')}}" 
+            <input type="text" class="form-control" name="search" placeholder="ค้นหาบทความ, ผลิตภัณฑ์" value="" 
             autocomplete="off"
             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
     </form>
@@ -98,7 +98,7 @@
     <div class="d-block d-md-none">
         <form class="search" action="{{url('search')}}" method="GET" id="mo_search">
             <i class="fas fa-search" data-id="#mo_search"></i>
-            <input type="text" class="form-control" name="search" placeholder="ค้นหาบทความ, ผลิตภัณฑ์" value="{{Input::get('search')}}" 
+            <input type="text" class="form-control" name="search" placeholder="ค้นหาบทความ, ผลิตภัณฑ์" value="" 
             autocomplete="off"
             aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </form>
