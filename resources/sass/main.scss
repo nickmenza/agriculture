@@ -251,15 +251,15 @@ a{
             display: block;
         }
      }
-     img{
-        height: 300px;
-        @media (max-width: 991.98px) {
-            height: 220px;
-        }
-        @media (max-width: 576.98px) {
-            height: auto;
-        }        
-     }
+    //  img{
+    //     height: 300px;
+    //     @media (max-width: 991.98px) {
+    //         height: 220px;
+    //     }
+    //     @media (max-width: 576.98px) {
+    //         height: auto;
+    //     }        
+    //  }
  }
 
  .btn{
