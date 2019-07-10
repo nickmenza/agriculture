@@ -251,6 +251,15 @@ a{
             display: block;
         }
      }
+     img{
+        height: 300px;
+        @media (max-width: 991.98px) {
+            height: 220px;
+        }
+        @media (max-width: 576.98px) {
+            height: auto;
+        }        
+     }
  }
 
  .btn{
@@ -435,9 +444,29 @@ $red:#FF5757;
     // color: black;
 }
 
-.search{
+#search_{
     position: absolute;
     right: 70px;
     top: 21px;
     z-index: 9999;
+    &.show{
+        right: 310px;
+    }
+}
+.search{
+    position: relative;
+    .form-control{
+        padding-left: 40px !important;
+        border-radius: 35px;
+        opacity: 0.8;
+        z-index: 10000;
+    }
+    i{
+        position: absolute;
+        top: 13px;
+        left: 13px;
+        color: #0A4B31;
+        z-index: 10001;
+
+    }
 }

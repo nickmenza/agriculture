@@ -31,6 +31,9 @@
 <div class="form-group"></div>
 
 <div class="container pt-5 pb-5">
+    <h6>
+        ผลการค้นหาสำหรับ "{{Input::get('search')}}"
+    </h6>
     <h1>
         บทความ
     </h1>

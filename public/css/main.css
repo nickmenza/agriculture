@@ -278,6 +278,22 @@ a:hover {
   display: block;
 }
 
+.ag img {
+  height: 300px;
+}
+
+@media (max-width: 991.98px) {
+  .ag img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 576.98px) {
+  .ag img {
+    height: auto;
+  }
+}
+
 .btn {
   font-size: 16px;
 }
@@ -459,10 +475,33 @@ a:hover {
   display: block;
 }
 
-.search {
+#search_ {
   position: absolute;
   right: 70px;
   top: 21px;
   z-index: 9999;
+}
+
+#search_.show {
+  right: 310px;
+}
+
+.search {
+  position: relative;
+}
+
+.search .form-control {
+  padding-left: 40px !important;
+  border-radius: 35px;
+  opacity: 0.8;
+  z-index: 10000;
+}
+
+.search i {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  color: #0A4B31;
+  z-index: 10001;
 }
 

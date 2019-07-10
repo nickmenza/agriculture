@@ -85,15 +85,21 @@
                 // }, 250));
             });
             $("#button-nav").click(function() {
-                console.log('test')
                 $(".hamburger").toggleClass("focus");
                 $(".content").toggleClass("show");
+                $("#search_").toggleClass("show");
             });
-            $('#nav-content').click(function() {
-                console.log('test')
-                $(".hamburger").toggleClass("focus");
-                $(".content").toggleClass("show");
-            });
+            $('.fa-search').click(function() {
+                console.log('tes')
+                if($(this).data().id){
+                    $($(this).data().id).submit()
+                }
+            })
+            // $('#nav-content').click(function() {
+            //     $(".hamburger").toggleClass("focus");
+            //     $(".content").toggleClass("show");
+            //     $("#search_").toggleClass("show");
+            // });
         })
         
     </script>

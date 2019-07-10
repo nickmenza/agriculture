@@ -68,16 +68,12 @@
     </div>
 </nav> --}}
 <div class="d-none d-md-block">
-<div class="search">
-    <form action="{{url('search')}}" method="GET">
-        <div class="input-group input-group-sm mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-sm">
-                        <i class="fas fa-search"></i>
-                </span>
-            </div>
-            <input type="text" class="form-control" name="search" value="{{Input::get('search')}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-        </div>
+<div class="search" id="search_">
+    <form action="{{url('search')}}" method="GET" id="des_search">
+            <i class="fas fa-search" data-id="#des_search"></i>
+            <input type="text" class="form-control" name="search" placeholder="ค้นหาบทความ, ผลิตภัณฑ์" value="{{Input::get('search')}}" 
+            autocomplete="off"
+            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
     </form>
 </div>
 </div>
@@ -97,22 +93,16 @@
             @foreach ($header as $item)
                 <li><a href="{{$item['link']}}">{{$item['text']}}</a></li>
             @endforeach
-        {{-- <li><a href="#0">Our Team</a></li>
-        <li><a href="#0">Work</a></li>
-        <li><a href="#0">Services</a></li>
-        <li><a href="#0">Contact</a></li> --}}
         </ul>
     </nav>
-    <form class="d-flex" action="{{url('search')}}" method="GET">
-        <div class="input-group input-group-sm mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-sm">
-                        <i class="fas fa-search"></i>
-                </span>
-            </div>
-            <input type="text" class="form-control" name="search" value="{{Input::get('search')}}" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-        </div>
-    </form>
+    <div class="d-block d-md-none">
+        <form class="search" action="{{url('search')}}" method="GET" id="mo_search">
+            <i class="fas fa-search" data-id="#mo_search"></i>
+            <input type="text" class="form-control" name="search" placeholder="ค้นหาบทความ, ผลิตภัณฑ์" value="{{Input::get('search')}}" 
+            autocomplete="off"
+            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </form>
+    </div>
     </div>
     
     
