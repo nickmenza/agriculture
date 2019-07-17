@@ -2,7 +2,7 @@
 
 @section('more-style')
     {{ Html::style('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css') }}
-    {{ Html::style('css/home.css') }}
+    {{ Html::style('css/home.css?v=1') }}
     <style>
         @media (max-width: 575.98px){
             .highlight.main {

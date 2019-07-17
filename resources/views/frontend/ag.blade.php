@@ -59,7 +59,7 @@
             }
 
             ?>
-            <div class="col-sm-6 col-md-4 mb-3 bbox" data-img = {{$path_img}}>
+            <a href="@if($item['url']){{$item['url']}} target='_blank' @else{{'#'}}@endif" class="col-sm-6 col-md-4 mb-3 bbox" data-img = {{$path_img}}>
                 <div class="ag">
                     {{-- @if(Storage::disk('uploads')->exists($item->images))
                         <img src="{{Storage::disk('uploads')->url(str_replace('article/', 'article/', $item->images))}}" class="mb-1 w-100 shadow">
@@ -73,7 +73,7 @@
                         {!! $item->detail !!}
                     </div>
                 </div>
-            </div>
+            </a>
             @endforeach
     </div>
 </div>
@@ -100,15 +100,15 @@
 
 @section('more-script')
 <script>
-    $( document ).ready(function() {
-        $('.bbox').click(function(){
-            // console.log($(this).data().img)
-            $('#img-modal').attr('src',$(this).data().img)
-            $('.img-ab').toggle();
-        })
-        $('.img-ab').click(function(){
-            $('.img-ab').toggle();
-        })
-    });
+    // $( document ).ready(function() {
+    //     $('.bbox').click(function(){
+    //         // console.log($(this).data().img)
+    //         $('#img-modal').attr('src',$(this).data().img)
+    //         $('.img-ab').toggle();
+    //     })
+    //     $('.img-ab').click(function(){
+    //         $('.img-ab').toggle();
+    //     })
+    // });
 </script>
 @endsection
