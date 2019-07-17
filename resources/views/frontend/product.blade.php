@@ -42,13 +42,13 @@
                 @else
                     <img src="https://via.placeholder.com/300x300" class="mb-1 w-100">
                 @endif
-                <div style="font-size:18px">
+                <div style="font-size:20px">
                     {{$item->product_name}}
                 </div>
-                <div class="color-main" style="font-size:14px">
+                <div class="color-main mb-2" style="font-size:14px">
                     {{$item->product_name_en}}
                 </div>
-                <div>
+                <div class="mb-2">
                     <button class="btn btn-dark radius">ข้อมูลเพิ่มเติม</button>
                 </div>
             </div>
