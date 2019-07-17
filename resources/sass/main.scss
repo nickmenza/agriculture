@@ -282,6 +282,9 @@ a{
 .btn-dark, .btn-dark.disabled {
     box-shadow: none;
     border-radius: 0;
+    &.radius{
+        border-radius: 30px;
+    }
 }
 
 .b-hover{
@@ -349,6 +352,9 @@ $red:#FF5757;
       padding:10px;
       text-align: left;
       line-height: 1.5;
+      @media (max-width: 767.98px) {
+        line-height: 1.2;
+      }
     }
     a {
     //   color:lighten(#121212,25%);
@@ -409,23 +415,28 @@ $red:#FF5757;
   .focus {
     .burger {
       transition:all 0.3s;
-      &:first-of-type {
-        background-color:$color;
-        transition-delay:0.4s;
-        transform: translate3d(0px, 0px, 0px) rotateZ(45deg);
         width:41px;
-        transform-origin:left top;
-      }
-      &:nth-of-type(2) {
-        opacity:0;
-      }
-      &:last-of-type {
-        background-color:$color;
-        transition-delay:0.4s;
-        transform: translate3d(0px, 0px, 0px) rotateZ(-45deg);
-        width:41px;
-        transform-origin:left bottom;
-      }
+        @media (max-width: 767.98px) {
+            width:36px;
+        }
+        &:first-of-type {
+            background-color:$color;
+            transition-delay:0.4s;
+            transform: translate3d(0px, 0px, 0px) rotateZ(45deg);
+            // width:41px;
+            transform-origin:left top;
+            
+        }
+        &:nth-of-type(2) {
+            opacity:0;
+        }
+        &:last-of-type {
+            background-color:$color;
+            transition-delay:0.4s;
+            transform: translate3d(0px, 0px, 0px) rotateZ(-45deg);
+            // width:41px;
+            transform-origin:left bottom;
+        }
     }
   }
 

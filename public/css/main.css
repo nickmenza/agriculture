@@ -306,6 +306,11 @@ a:hover {
   border-radius: 0;
 }
 
+.btn-dark.radius,
+.btn-dark.disabled.radius {
+  border-radius: 30px;
+}
+
 .b-hover {
   cursor: pointer;
 }
@@ -359,6 +364,12 @@ a:hover {
   padding: 10px;
   text-align: left;
   line-height: 1.5;
+}
+
+@media (max-width: 767.98px) {
+  .content .navigation li {
+    line-height: 1.2;
+  }
 }
 
 .content .navigation a {
@@ -419,6 +430,13 @@ a:hover {
 
 .focus .burger {
   transition: all 0.3s;
+  width: 41px;
+}
+
+@media (max-width: 767.98px) {
+  .focus .burger {
+    width: 36px;
+  }
 }
 
 .focus .burger:first-of-type {
@@ -426,7 +444,6 @@ a:hover {
   transition-delay: 0.4s;
   -webkit-transform: translate3d(0px, 0px, 0px) rotateZ(45deg);
           transform: translate3d(0px, 0px, 0px) rotateZ(45deg);
-  width: 41px;
   -webkit-transform-origin: left top;
           transform-origin: left top;
 }
@@ -440,7 +457,6 @@ a:hover {
   transition-delay: 0.4s;
   -webkit-transform: translate3d(0px, 0px, 0px) rotateZ(-45deg);
           transform: translate3d(0px, 0px, 0px) rotateZ(-45deg);
-  width: 41px;
   -webkit-transform-origin: left bottom;
           transform-origin: left bottom;
 }

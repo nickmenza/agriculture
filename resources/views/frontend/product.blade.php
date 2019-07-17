@@ -48,6 +48,9 @@
                 <div class="color-main" style="font-size:14px">
                     {{$item->product_name_en}}
                 </div>
+                <div>
+                    <button class="btn btn-dark radius">ข้อมูลเพิ่มเติม</button>
+                </div>
             </div>
         </a>
         @endforeach
