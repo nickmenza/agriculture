@@ -29,6 +29,11 @@
         color: white;
         background-color: #0A4B31;
     }
+    @media (max-width: 991.98px) {
+        .accordion-header.active{
+            margin-bottom: 10px;
+        }
+    }
 </style>
 @endsection
 
