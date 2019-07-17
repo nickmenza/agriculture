@@ -31,7 +31,7 @@
                 <div class="carousel-item @if($key == 0){{"active"}}@endif">
                     <img class="d-block w-100" src="{{$path}}">
                     <div class="text-center" style="color:white;position: absolute;left: 0;right: 0;top: 40%;">
-                            <h3 class="mb-1">
+                            <h3 class="mb-1 carousel-title">
                                 @if(isset($text_th))
                                 {{$text_th}}
                                 @endif
