@@ -59,7 +59,11 @@
             }
 
             ?>
-            <a href="@if($item['url']){{$item['url']}} target='_blank' @else{{'#'}}@endif" class="col-sm-6 col-md-4 mb-3 bbox" data-img = {{$path_img}}>
+            @if($item['url'])
+                <a href="{{$item['url']}}" target="_blank" class="col-sm-6 col-md-4 mb-3 bbox" data-img = {{$path_img}}>
+            @else
+                <a href="#" class="col-sm-6 col-md-4 mb-3 bbox" data-img = {{$path_img}}>
+            @endif
                 <div class="ag">
                     {{-- @if(Storage::disk('uploads')->exists($item->images))
                         <img src="{{Storage::disk('uploads')->url(str_replace('article/', 'article/', $item->images))}}" class="mb-1 w-100 shadow">
