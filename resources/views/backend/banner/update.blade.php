@@ -20,7 +20,7 @@
         </div>
         <div class="card-body">
             <div class="form-group row mb-4">
-                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">เลือกประเภท</label>
+                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">หน้า</label>
                 <div class="col-sm-12 col-md-7">
                         <select class="custom-select" name="type">
                             <option value="">กรุณาเลือก</option>
@@ -31,13 +31,13 @@
                 </div>
             </div>
             <div class="form-group row mb-4">
-                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">ชื่อ</label>
+                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">ข้อความ</label>
                 <div class="col-sm-12 col-md-7">
                     <input type="text" class="form-control" name="banner_name" value="{{$data->banner_name}}">
                 </div>
             </div>
             <div class="form-group row mb-4">
-                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">ชื่อ (EN)</label>
+                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">ข้อความ (EN)</label>
                 <div class="col-sm-12 col-md-7">
                     <input type="text" class="form-control" name="banner_name_en" value="{{$data->banner_name_en}}">
                 </div>

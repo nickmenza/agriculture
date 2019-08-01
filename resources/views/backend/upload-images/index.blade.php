@@ -20,7 +20,7 @@
         <div class="d-flex justify-content-between align-items-center mb-2">
             <div class="h4"> {{$title}} </div>
         </div>
-        <div class="d-flex justify-content-between align-items-center mb-2">
+        {{-- <div class="d-flex justify-content-between align-items-center mb-2">
             <form method="GET" action="{{route($route_name.'.index')}}" class="">
                 <div class="input-group">
                     <input type="text" class="form-control" name="search" placeholder="ค้นหา..." aria-label="" value="{{Input::get('search')}}">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </form>
-        </div>
+        </div> --}}
         
         <form action="{{url()->full()}}" id="dropzone">
             @csrf 

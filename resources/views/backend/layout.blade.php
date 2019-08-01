@@ -89,6 +89,14 @@
                 justify-content:center;
             }
 
+            .form-group .control-label, .form-group > label{
+                font-size: 16px;
+            }
+
+            .word-break{
+                word-break:break-all
+            }
+
 
             /* #17AF9F */
 
@@ -99,7 +107,7 @@
 </head>
 
 <body>
-
+    
     <div id="app">
         <div class="main-wrapper main-wrapper-1">
             
@@ -109,6 +117,11 @@
     
             <!-- Main Content -->
             <div class="main-content">
+                    @if(session()->has('error'))
+                    <div class="alert alert-danger">
+                        {{session()->get('error')}}
+                    </div>
+                    @endif
                 @yield('content')
             </div>
             {{-- End Main --}}

@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </form>
-            <a href="{{route($route_name.'.create')}}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus-square"></i>เพิ่ม</a>
+            {{-- <a href="{{route($route_name.'.create')}}" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus-square"></i>เพิ่ม</a> --}}
         </div>
         
         <div class="table-responsive">
@@ -51,7 +51,7 @@
                         <td>
                             {{$item->subject}}
                         </td>
-                        <td>
+                        <td class="word-break">
                             {{$item->message}}
                         </td>
                         

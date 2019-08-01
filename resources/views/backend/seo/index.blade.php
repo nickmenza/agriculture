@@ -30,7 +30,7 @@
                         <th scope="col">title</th>
                         <th scope="col">keyword</th>
                         <th scope="col">description</th>
-                        <th scope="col">ประเถท</th>
+                        <th scope="col">หน้า</th>
                         <th scope="col">action</th>
                     </tr>
                 </thead>

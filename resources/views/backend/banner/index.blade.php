@@ -28,9 +28,9 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">รูปภาพ</th>
-                        <th scope="col">ประเภท</th>
-                        <th scope="col">ชื่อ</th>
-                        <th scope="col">ชื่อ(EN)</th>
+                        <th scope="col">หน้า</th>
+                        <th scope="col">ข้อความ</th>
+                        <th scope="col">ข้อความ(EN)</th>
                         <th scope="col">action</th>
                     </tr>
                 </thead>

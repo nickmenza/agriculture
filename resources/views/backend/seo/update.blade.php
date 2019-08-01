@@ -20,9 +20,9 @@
         </div>
         <div class="card-body">
             <div class="form-group row mb-4">
-                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">เลือกประเภท</label>
+                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">หน้า</label>
                 <div class="col-sm-12 col-md-7">
-                        <select class="custom-select" name="type">
+                        <select class="custom-select" name="type" required>
                             <option value="">กรุณาเลือก</option>
                             @foreach ($list_type as $key => $item)
                             <option value="{{$key}}" @if($data->type == $key)selected @endif>{{$item}}({{$key}})</option>
@@ -33,19 +33,19 @@
             <div class="form-group row mb-4">
                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Title</label>
                 <div class="col-sm-12 col-md-7">
-                    <input type="text" class="form-control" name="title" value="{{$data->title}}">
+                    <input type="text" class="form-control" name="title" value="{{$data->title}}" required>
                 </div>
             </div>
             <div class="form-group row mb-4">
                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Keyword</label>
                 <div class="col-sm-12 col-md-7">
-                    <input type="text" class="form-control" name="keyword" value="{{$data->keyword}}">
+                    <input type="text" class="form-control" name="keyword" value="{{$data->keyword}}" required>
                 </div>
             </div>
             <div class="form-group row mb-4">
                 <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Description</label>
                 <div class="col-sm-12 col-md-7">
-                    <input type="text" class="form-control" name="description" value="{{$data->description}}">
+                    <input type="text" class="form-control" name="description" value="{{$data->description}}" required>
                 </div>
             </div>
             

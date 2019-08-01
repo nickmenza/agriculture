@@ -13,7 +13,7 @@ class Contact extends Model
     public $timestamps = true;
 
     public $fillable = [
-        'contact_name',
+        'name',
         'phone',
         'email',
         'subject',

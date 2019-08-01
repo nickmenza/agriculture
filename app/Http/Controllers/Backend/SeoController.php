@@ -77,6 +77,12 @@ class SeoController extends Controller
     
     public function store(Request $request)
     {
+        $check = new $this->model;
+        $check = $check->where('type',$request->type)->first();
+        if($check){
+            session()->flash('error','มีแล้ว ไม่สามารถเพิ่มได้');
+            return redirect()->back();
+        }
         $model = new $this->model;
         $data = $request->except('_token','id');
         if ($request->hasFile('images')) {
