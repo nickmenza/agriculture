@@ -12,6 +12,7 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     public function __construct() {
+        $this->GET_SEO(4);
         
     }
 

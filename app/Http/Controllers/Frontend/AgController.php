@@ -11,6 +11,7 @@ use App\Models\Article;
 class AgController extends Controller
 {
     public function __construct() {
+        $this->GET_SEO(6);
         
     }
 

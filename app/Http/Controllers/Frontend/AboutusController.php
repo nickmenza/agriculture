@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Input;
 class AboutusController extends Controller
 {
     public function __construct() {
+        $this->GET_SEO(2);
         
     }
 

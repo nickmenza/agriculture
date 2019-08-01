@@ -10,6 +10,7 @@ use App\Models\Career;
 class CareerController extends Controller
 {
     public function __construct() {
+        $this->GET_SEO(8);
         
     }
 

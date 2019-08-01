@@ -11,7 +11,7 @@ use App\Models\Contact;
 class ContactController extends Controller
 {
     public function __construct() {
-        
+        $this->GET_SEO(9);
     }
 
     public function index(){

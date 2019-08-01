@@ -10,6 +10,7 @@ use App\Models\Location;
 class LocationController extends Controller
 {
     public function __construct() {
+        $this->GET_SEO(7);
         
     }
 

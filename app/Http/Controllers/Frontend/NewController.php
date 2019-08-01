@@ -12,6 +12,7 @@ use App\Models\Article;
 class NewController extends Controller
 {
     public function __construct() {
+        $this->GET_SEO(3);
         
     }
 

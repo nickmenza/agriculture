@@ -12,6 +12,7 @@ use App\Models\Banner;
 class HomeController extends Controller
 {
     public function __construct() {
+        $this->GET_SEO(1);
     }
 
     public function index(){
