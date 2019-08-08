@@ -17,7 +17,7 @@ class ProductController extends Controller
     }
 
     public function index(){
-        $products = Product::select()->paginate(6);
+        $products = Product::select()->paginate(18);
         return view('frontend.product',compact('products'));
     }
 

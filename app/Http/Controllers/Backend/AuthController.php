@@ -32,7 +32,7 @@ class AuthController extends Controller
         $password = $request->password;
         
         $collection = collect([
-            ['username' => 'admin', 'password' => 'demo'],
+            ['username' => 'admin', 'password' => 'rdkaset1234'],
         ]);
 
         $collection = $collection
