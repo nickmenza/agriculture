@@ -60,6 +60,11 @@ Route::prefix('_admin')->name('admin.')->group(function () {
         Route::get('test', function () {
                 return view('backend.test');
         });
+        Route::get('test_mail',function(){
+            \Mail::send('mail.contact', [], function ($m) {
+                $m->to('woramath.nick@gmail.com')->subject('Your Reminder!');
+            });
+        });
     });
 });
 

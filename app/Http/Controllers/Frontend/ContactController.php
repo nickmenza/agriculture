@@ -21,6 +21,9 @@ class ContactController extends Controller
     public function post(Request $request){
         $data = $request->except('_token');
         Contact::create($data);
+        \Mail::send('mail.contact', ['request' => $request], function ($m) use($request) {
+            $m->to('marketing_hq1@rdkaset.com')->subject($request->subject);
+        });
         return redirect()->back();
     }
     

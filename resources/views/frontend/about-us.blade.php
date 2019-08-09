@@ -49,7 +49,8 @@
 @endcomponent
 
 <div class="bg-img" style="background-image: url('/images/bg1.png')">
-    
+    <div class="row form-group">
+    </div>
     <div class="container pt-3 pb-5">
         <div class="row mb-5">
             <div class="col-md-9">
