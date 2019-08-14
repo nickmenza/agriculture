@@ -30,6 +30,7 @@ class ProductController extends Controller
                 }
             });
         }
+        $model = $model->orderBy('sequence','asc');
         $data = $model->select()->paginate(config('global.page'));
         return view($this->path.'.index', compact(
             'path',
@@ -121,6 +122,21 @@ class ProductController extends Controller
     {
         $model = new $this->model;
         $model->find($id)->delete();
+        return redirect(route($this->route_name.'.index'));
+    }
+
+    public function sequence($id,Request $request){
+        $new_model = new $this->model;
+        $new_model = $new_model->find($id)->update([
+            'sequence' => $request->sequence - 0.5
+        ]);
+        $model = new $this->model;
+        $model = $model->orderBy('sequence','asc')->get();
+        foreach ($model as $key => $value) {
+            $value->sequence = $key+1;
+            $value->save();
+            # code...
+        }
         return redirect(route($this->route_name.'.index'));
     }
 }

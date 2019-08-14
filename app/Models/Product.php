@@ -18,5 +18,6 @@ class Product extends Model
         'product_name_old',
         'detail',
         'images',
+        'sequence'
     ];
 }

@@ -50,6 +50,7 @@ Route::prefix('_admin')->name('admin.')->group(function () {
     Route::group(['middleware' => ['admin']], function() {
         Route::resource('banner', 'Backend\BannerController');
         Route::resource('article', 'Backend\ArticleController');
+        Route::post('products/{product}/sequence', 'Backend\ProductController@sequence')->name('products.sequence');
         Route::resource('products', 'Backend\ProductController');
         Route::resource('location', 'Backend\LocationController');
         Route::resource('career', 'Backend\CareerController');

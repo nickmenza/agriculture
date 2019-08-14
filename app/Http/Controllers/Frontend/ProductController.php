@@ -17,7 +17,7 @@ class ProductController extends Controller
     }
 
     public function index(){
-        $products = Product::select()->paginate(18);
+        $products = Product::select()->orderBy('sequence','asc')->paginate(18);
         return view('frontend.product',compact('products'));
     }
 

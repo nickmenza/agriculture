@@ -2,6 +2,12 @@
 
 @section('more-style')
     <style>
+        .over{
+            overflow: hidden;
+            max-height: 200px;
+            max-width: 500px;
+            overflow-y: auto;
+        }
     </style>
 @endsection
 
@@ -30,6 +36,7 @@
                         <th scope="col">รูปภาพ</th>
                         <th scope="col">ชื่อ</th>
                         <th scope="col">รายละเอียด</th>
+                        <th scope="col">ลำดับ</th>
                         <th scope="col">action</th>
                     </tr>
                 </thead>
@@ -50,7 +57,20 @@
                             <br>
                             ชื่อเดิม : {{$item->product_name_old}}
                         </td>
-                        <td>{!!$item->detail!!}</td>
+                        <td>
+                            <div class="over">
+                                {!!$item->detail!!}
+                            </div>
+                        </td>
+                        <td>
+                            <form action="{{route($route_name.'.sequence',$item->id)}}" method="POST" class="d-flex">
+                                @csrf
+                                <input type="number" class="form-control" name="sequence" value="{{$item->sequence}}" style="width:70px" required>
+                                <button type="submit" class="btn btn-primary">
+                                    Submit
+                                </button>
+                            </form>
+                        </td>
                         <td class="text-center">
                             <div class="d-flex justify-content-center">
                                 <a href="{{route($route_name.'.edit',$item->id)}}" class="btn btn-icon icon-left btn-primary mr-1"><i class="far fa-edit"></i></a>
