@@ -6,7 +6,7 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => "Agriculture", // set false to total remove
+            'title'        => "ต้นกล้าปาล์มน้ำมัน สายพันธุ์ปาล์ม RD KASET", // set false to total remove
             'description'  => '', // set false to total remove
             'separator'    => ' - ',
             'keywords'     => [],

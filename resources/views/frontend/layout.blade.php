@@ -52,6 +52,15 @@
     {{ Html::script('stisla-master/assets/js/scripts.js') }}
     {{ Html::script('stisla-master/assets/js/custom.js') }}
     {{ Html::script('js/app.js') }}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117366505-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-117366505-1');
+    </script>
     <script id="salesdesk-widget-script" src="https://api-salesdesk.readyplanet.com/js/salesdesk-widget-v2.min.js?business_id=6aff2496603639d45b9f965aea273b2a" type="text/javascript" charset="UTF-8"></script>
     <script>
         $( document ).ready(function() {
