@@ -92,7 +92,7 @@
                 <div class="b-detail">
                     <div class="box justify-content-center align-items-end">
                         <div class="h5 mb-1">
-                            ผลิตภัณฑ์ของเรา
+                            ข้อมูลสายพันธุ์
                         </div>
                         <div class="text-uppercase" style="font-size:12px">
                             OUR PRODUCTs
@@ -124,8 +124,8 @@
         <?php
         $list_a = [
             [
-                'text' => 'คู่มือการจัดการสวน',
-                'text_en' => 'garden management',
+                'text' => 'คู่มือการจัดการสวนปาล์มน้ำมัน',
+                'text_en' => 'OIL PALM PLANTATION MANAGEMENT',
                 'img' => url('/images/h-garden.png'),
                 'cls' => '',
                 'url' => url('/garden'),
