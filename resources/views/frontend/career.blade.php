@@ -84,7 +84,7 @@
                     <div class="pl-3">{!!$item->property!!}</div>
                     <div class="form-group"></div>
                     <div class="text-center">
-                    <a href="#" class="btn btn-dark">สมัครตำแหน่งนี้</a>
+                    <a href="mailto:hr2@rdkaset.com" class="btn btn-dark">สมัครตำแหน่งนี้</a>
                     </div>
                 </div>
             @endforeach
