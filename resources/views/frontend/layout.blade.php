@@ -61,6 +61,83 @@
 
     gtag('config', 'UA-117366505-1');
     </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+        ga('create', 'UA-117366505-1', 'auto');
+
+    </script>
+    <script>
+        $( document ).ready(function() {
+            $('#menu-contact').click(function(){
+                ga('send', 'event', 'การขาย', 'ส่งข้อมูล-1', 'ส่งข้อมูล-1');
+            })
+            $('#btn-submit-contact').click(function(){
+                ga('send', 'event', 'การขาย', 'ส่งข้อมูล-2', 'ส่งข้อมูล-2');
+            })
+            $('#contact-phone').click(function(){
+                ga('send', 'event', 'การขาย', 'PHONE', 'PHONE');
+            })
+
+            $('#home-our-product').click(function(){
+                ga('send', 'event', 'ข้อมูล', 'ดูรายละเอียด-1', 'ดูรายละเอียด-1');
+            })
+
+            $('#home-old-palm-center').click(function(){
+                ga('send', 'event', 'ข้อมูล', 'ดูรายละเอียด-2', 'ดูรายละเอียด-2');
+            })
+
+            $('#home-our-agr').click(function(){
+                ga('send', 'event', 'ข้อมูล', 'ดูรายละเอียด-3', 'ดูรายละเอียด-3');
+            })
+            
+            $('.page-product').click(function(){
+                ga('send', 'event', 'ข้อมูล', 'ข้อมูลเพิ่มเติม-'+$(this).data().id, 'ดูรายละเอียด-'+$(this).data().id);
+            })
+
+           
+            $('#footer-agriculturist').click(function(){
+                ga('send', 'event', 'ข้อมูล', 'ดูรายละเอียด-3', 'ดูรายละเอียด-3');
+            })
+
+            $('#footer-location').click(function(){
+                ga('send', 'event', 'ข้อมูล', 'ดูรายละเอียด-4', 'ดูรายละเอียด-4');
+            })
+
+            $('#footer-product').click(function(){
+                ga('send', 'event', 'ข้อมูล', 'ดูรายละเอียด-5', 'ดูรายละเอียด-5');
+            })
+
+            $('#footer-contact').click(function(){
+                ga('send', 'event', 'ข้อมูล', 'ดูรายละเอียด-6', 'ดูรายละเอียด-6');
+            })
+
+            $('#menu-agriculturist').click(function(){
+                ga('send', 'event', 'ข้อมูล', 'ดูรายละเอียด-7', 'ดูรายละเอียด-7');
+            })
+
+            $('#menu-location').click(function(){
+                ga('send', 'event', 'ข้อมูล', 'ดูรายละเอียด-8', 'ดูรายละเอียด-8');
+            })
+
+            $('#menu-product').click(function(){
+                ga('send', 'event', 'ข้อมูล', 'ดูรายละเอียด-9', 'ดูรายละเอียด-9');
+            })
+
+            $('#menu-contact').click(function(){
+                ga('send', 'event', 'ข้อมูล', 'ดูรายละเอียด-10', 'ดูรายละเอียด-10');
+            })
+
+            
+           
+            
+            
+        })
+        
+    </script>
     <script id="salesdesk-widget-script" src="https://api-salesdesk.readyplanet.com/js/salesdesk-widget-v2.min.js?business_id=6aff2496603639d45b9f965aea273b2a" type="text/javascript" charset="UTF-8"></script>
     <script>
         $( document ).ready(function() {
@@ -113,6 +190,25 @@
         })
         
     </script>
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2511164525794065');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=2511164525794065&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
     @yield('more-script')
 
 </body>

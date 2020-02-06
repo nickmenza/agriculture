@@ -54,7 +54,7 @@
             <h5 class="">ชื่อเดิม ​: {{$data->product_name_old}}</h5>
             <div class="form-group">
             </div>
-            <div class="" style="line-height:2">
+            <div class="" style="line-height:2" data-id="{{$data->id}}">
                 {!! $data->detail !!}
             </div>
         </div>
@@ -66,7 +66,7 @@
     <h5 class="text-center color-main pb-3">ผลิตภัณฑ์แนะนำ</h5>
     <div class="row article1">
         @foreach ($products as $item)
-        <a class="col-sm-6 col-md-3 mb-3 text-center" href="#">
+        <a class="col-sm-6 col-md-3 mb-3 text-center" href="#" >
             <div style="background-color:white;color:black" class="p-2">
                 @if(Storage::disk('uploads')->exists($item->images))
                     <img src="{{Storage::disk('uploads')->url(str_replace('product/', 'product/300/', $item->images))}}" class="mb-1 w-100">

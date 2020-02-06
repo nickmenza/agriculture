@@ -97,7 +97,7 @@
                         <div class="text-uppercase" style="font-size:12px">
                             OUR PRODUCTs
                         </div>
-                        <div href="{{url('/product')}}" class="btn btn-dark h6 mt-2" style="width:120px; font-size:14px">
+                        <div href="{{url('/product')}}" class="btn btn-dark h6 mt-2" style="width:120px; font-size:14px" id="home-our-product">
                             ดูรายละเอียด
                         </div>
                     </div>
@@ -105,7 +105,7 @@
             </div>
         </a>
         
-        <a href="{{url('location')}}" class="order-3 order-md-3 col-6 col-md-3 mb-3 text-center b-hover">
+        <a href="{{url('location')}}" class="order-3 order-md-3 col-6 col-md-3 mb-3 text-center b-hover" id="home-old-palm-center">
             <div class="background-new" style="background-image: url({{url('/images/h-location.png')}})">
                 {{-- <img class="w-100 h-100" src="{{url('/images/h-location.png')}}"> --}}
                 <div class="b-detail">
@@ -124,6 +124,7 @@
         <?php
         $list_a = [
             [
+                'id' => 'home-old-palm-management',
                 'text' => 'คู่มือการจัดการสวนปาล์มน้ำมัน',
                 'text_en' => 'OIL PALM PLANTATION MANAGEMENT',
                 'img' => url('/images/h-garden.png'),
@@ -132,6 +133,7 @@
 
             ],
             [
+                'id' => 'home-our-agr',
                 'text' => 'เกษตรกรตัวอย่าง',
                 'text_en' => 'OUR AGRiculturust',
                 'img' => url('/images/h-ag.png'),
@@ -140,6 +142,7 @@
 
             ],
             [
+                'id' => 'home-new-event',
                 'text' => 'ข่าวสารและกิจกรรม',
                 'text_en' => 'news and event',
                 'img' => url('/images/h-new.png'),
@@ -148,6 +151,7 @@
 
             ],
             [
+                'id' => 'home-career',
                 'text' => 'ร่วมงานกับเรา',
                 'text_en' => 'career',
                 'img' => url('/images/h-career.png'),
@@ -159,7 +163,7 @@
         ?>
         @foreach ($list_a as $item)
             
-        <a href="{{$item['url']}}" class="order-4 col-6 col-md-3 mb-3 text-center b-hover">
+        <a href="{{$item['url']}}" class="order-4 col-6 col-md-3 mb-3 text-center b-hover" id="{{$item['id']}}">
             <div class="background-new more" style="background-image: url({{$item['img']}});">
                 {{-- <img class="w-100 h-100" src="{{$item['img']}}"> --}}
                 <div class="b-detail">

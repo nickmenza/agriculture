@@ -1,38 +1,47 @@
 <?php
     $header = [
         [
+            'id' => 'menu-main',
             'text' => 'หน้าหลัก',
             'link' => url('/'),
         ],
         [
+            'id' => 'menu-about',
             'text' => 'เกี่ยวกับเรา',
             'link' => url('/about-us'),
         ],
         [
+            'id' => 'menu-news',
             'text' => 'ข่าวสารและกิจกรรม',
             'link' => url('/news'),
         ],
         [
+            'id' => 'menu-garden',
             'text' => 'คู่มือการจัดสวน',
             'link' => url('/garden'),
         ],
         [
+            'id' => 'menu-agriculturist',
             'text' => 'เกษตรกรตัวอย่าง',
             'link' => url('/agriculturist'),
         ],
         [
+            'id' => 'menu-location',
             'text' => 'ศูนย์กล้าปาล์มน้ำมัน',
             'link' => url('/location'),
         ],
         [
+            'id' => 'menu-product',
             'text' => 'ผลิตภัณฑ์',
             'link' => url('/product'),
         ],
         [
+            'id' => 'menu-career',
             'text' => 'ร่วมงานกับเรา',
             'link' => url('/career'),
         ],
         [
+            'id' => 'menu-contact',
             'text' => 'ติดต่อเรา',
             'link' => url('/contact'),
         ],
@@ -91,7 +100,7 @@
                 <img src="/images/logo.png" class="logo" style="width: 50px;">
             </a></li>
             @foreach ($header as $item)
-                <li><a href="{{$item['link']}}">{{$item['text']}}</a></li>
+                <li><a id="{{$item['id']}}" href="{{$item['link']}}">{{$item['text']}}</a></li>
             @endforeach
         </ul>
     </nav>

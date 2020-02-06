@@ -40,18 +40,21 @@
         <?php
         $list = [
             [
+                'id' => 'contact-phone',
                 'img' => 'images/contact1.png',
                 'head' => 'PHONE',
                 'text' => '088 385 1851-2',
                 'link' => 'tel:088 385 1851-2'
             ],
             [
+                'id' => 'contact-address',
                 'img' => 'images/contact2.png',
                 'head' => 'ADDRESS',
                 'text' => '2170 อาคารกรุงเทพ ทาวเวอร์ ชั้นที่ 18 ถ.เพชรบุรีตัดใหม่ แขวงบางกะปิ เขตห้วยขวาง , กรุงเทพมหานคร 10310',
                 'link' => ""
             ],
             [
+                'id' => 'contact-email',
                 'img' => 'images/contact3.png',
                 'head' => 'E-MAIL',
                 'text' => 'marketing_hq1@rdkaset.com',
@@ -60,7 +63,7 @@
         ];
         ?>
         @foreach($list as $key => $value)
-        <a class="box-l" @if($key==1)target="_blank"@endif href="@if(isset($value["link"])){{$value["link"]}}@endif">
+        <a class="box-l" @if($key==1)target="_blank"@endif href="@if(isset($value["link"])){{$value["link"]}}@endif" id="{{$value['id']}}">
             <div class="img text-center">
                 <img src="{{$value['img']}}">
             </div>
@@ -97,7 +100,7 @@
             <textarea class="form-control" name="message" placeholder="Message" required></textarea>
         </div>
         <div class="form-group text-center">
-            <button type="submit" class="btn btn-m h6" style="width:120px">
+            <button type="submit" class="btn btn-m h6" style="width:120px" id="btn-submit-contact">
                 ส่งข้อความ
             </button>
         </div>

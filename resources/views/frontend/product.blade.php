@@ -34,8 +34,8 @@
 <div class="bg-img" style="background-image: url('/images/bg-ourproduct.png')">
 <div class="container pt-5 pb-5">
     <div class="row">
-        @foreach ($products as $item)
-        <a class="col-sm-6 col-md-4 mb-3 text-center" href="{{url('product/'.$item->id.'/'.Str::slug($item->product_name_en, '-'))}}">
+        @foreach ($products as $key => $item)
+        <a class="col-sm-6 col-md-4 mb-3 text-center page-product" href="{{url('product/'.$item->id.'/'.Str::slug($item->product_name_en, '-'))}}" data-id="{{$item->id}}">
             <div style="background-color:white;color:black" class="p-2">
                 @if(Storage::disk('uploads')->exists($item->images))
                     <img src="{{Storage::disk('uploads')->url(str_replace('product/', 'product/', $item->images))}}" class="mb-1 w-100">
